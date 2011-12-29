@@ -15,6 +15,7 @@
 
     <!-- CSS -->
     <!-- <link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="css/rssfeed.css">
     <link rel="stylesheet" href="css/boot.css">
     <link rel="stylesheet" href="css/style.css">
     <style type="text/css">
@@ -64,7 +65,7 @@
           you can find some turotials I've records at 
           <a href="http://greenido.wordpress.com/chrome/" target="_blank">
             my blog chrome page</a>. For a little fun with some 'How to get things done with Chromebook' you can...
-          <span id="more-head-but"><a class="btn primary large">More &raquo;</a>  </span>
+          <span id="more-head-but"><a class="btn primary">More &raquo;</a>  </span>
         </p>
         <div id="more-head">
           <p>
@@ -74,7 +75,7 @@
             We will start with some easy taks like: fixing your dad’s computer 
             (and you can take it to other places like: helping mom with her 2 years old desktop etc’), 
             how to set it up and even how to backup!
-            <span id="less-head-but"><a class="btn primary large">Less &laquo;</a>  </span>
+            <span id="less-head-but"><a class="btn primary">Less &laquo;</a>  </span>
           </p>
         </div>
 
@@ -85,8 +86,9 @@
         <div class="span6" id="mark-done">
           <h2>Presentations</h2>
 
-          <p><img src='imgs/tutorials.png' />List of Talks from Conferences, Google Developers Days, GTUGs, Meetups and everything
-            in between</p>
+          <p><img src='imgs/tutorials.png' align="left" />List of Talks from Conferences, Google Developers Days, GTUGs, Meetups and everything
+            in between.
+          </p>
           <ul>
             <li><a href="http://goo.gl/Rt3LM" target="_blank">Chrome & HTML5 - CloudCon (Nov 2011)</a></li>
             <li><a href="http://ido-green.appspot.com/Chrome_HTML5_for_GTUG_TLV_2011_10_25_.pdf" target="_blank">Chrome & HTML5 (PDF, Oct 2011)</a></li>
@@ -104,7 +106,7 @@
             <li><a href="http://smustalks.appspot.com/sxsw-11/#slide1" target="_blank">HTML5 and You (Boris&Paul SXSW-11)</a></li>
             <li><a href="http://fronteers-cws.appspot.com/WebStore/index.html" target="_blank">Chrome OS and Chrome Web Store (11/7/2011)</a></li>
           </ul>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
+
         </div>
         <div class="span5">
           <h2>Code And Hacking</h2>
@@ -138,17 +140,33 @@
         <div class="span5">
           <h2>News</h2>
           <p>Some post I'm writing on my blog, html5rock and other places around the web. I'll also fetch here all the updates on Chrome, ChromeOS and HTML5 that I'm finding around the block.</p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
+
+          <div id="myblog"></div>
+          <p>
+            <div id="myblog-but"><a class="btn">More Chrome News &raquo;</a></div>
+          </p>
         </div>
+      </div>
+      <div class="row">
+        <div class="span16">
+          <div id="chromenews"></div>
+        </div>
+        
       </div>
 
       <footer>
-        
+
         <div class="row">
-          <div class="span3">&copy; Ido Green 2011</div>
-          <div class="span3"><a href="https://twitter.com/#!/greenido" target="_blank"> Twitter</a></div>
-          <div class="span3"><a href="http://about.me/greenido" target="_blank">About</a></div>
-          <div class="span3"><a href="http://plus.ly/greenido" target="_blank">Contact</a></div>
+          <div class="span2">&copy; Ido Green 2011</div>
+          <div class="span2"><a href="https://twitter.com/#!/greenido" target="_blank" title="My twitter user @greenido"><img src="imgs/twitter64x64.png"/></a></div>
+          <div class="span2"><a href="http://about.me/greenido" target="_blank" title="Little jump in Colorado"><img src="imgs/in64x64.png"/></a></div>
+          <div class="span2"><a href="http://plus.ly/greenido" target="_blank" title="My G+ spot in the world"><img src="imgs/g+64x64.png"</a></div>
+          <div class="span2"><a href="http://greenido.wordpress.com" target="_blank" title="My blog"><img src="imgs/wordpress64x64.png"</a></div>
+          <div class="span3">   
+            <a href="http://www.w3.org/html/logo/" arget="_blank" class='w3-logo'>
+              <img src="http://www.w3.org/html/logo/badge/html5-badge-h-connectivity-css3-device-graphics-multimedia-performance-semantics-storage.png" width="357" height="64" alt="HTML5 Powered with Connectivity / Realtime, CSS3 / Styling, Device Access, Graphics, 3D &amp; Effects, Multimedia, Performance &amp; Integration, Semantics, and Offline &amp; Storage" title="HTML5 Powered with Connectivity / Realtime, CSS3 / Styling, Device Access, Graphics, 3D &amp; Effects, Multimedia, Performance &amp; Integration, Semantics, and Offline &amp; Storage">
+            </a>
+          </div>
         </div>
       </footer>
 
@@ -158,6 +176,7 @@
     <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
 
     <!-- scripts concatenated and minified via ant build script-->
+    <script src="js/libs/jquery.zrssfeed.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/script.js"></script>
 
@@ -165,7 +184,7 @@
     <!-- end scripts-->
 
     <script>
-      var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']]; // Change UA-XXXXX-X to be your site's ID
+      var _gaq=[['_setAccount','UA-27750723-1'],['_trackPageview']]; 
       (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
         g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
         s.parentNode.insertBefore(g,s)}(document,'script'));

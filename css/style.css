@@ -295,6 +295,10 @@ table { border-collapse: collapse; border-spacing: 0; }
   position: relative;
 }
 
+#mark-done img {
+  padding: 6px;
+  width: 45px;
+}
 
 /* Let have some nice lists */
 div#mark-done > ul{
@@ -359,4 +363,8 @@ div#mark-done:nth-of-type(1) ul li:after{
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -o-transform: rotate(45deg);
+}
+
+#myblog-but {
+  padding-top: 8px;
 }
