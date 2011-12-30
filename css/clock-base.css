@@ -1,11 +1,12 @@
 /* Time is the most important resource (after your health) */
 
 html, body {
-  min-height: 100%;
-  background-color: goldenrod;
-  padding:60px;
+  
+  padding:6px;
 }
 /*
+background-color: goldenrod;
+min-height: 100%;
 body {
   background: -webkit-gradient(radial, 40% 20%, 0, 40% 20%, 1000, 
     from(rgba(255, 255, 255, .1)), to(rgba(63, 110, 110, .7))), 
@@ -23,15 +24,15 @@ body {
   background: -webkit-gradient(radial, 40% 10%, 0, 40% 10%, 1000, from(transparent), to(rgba(0, 0, 0, .7))), -webkit-gradient(linear, left top, right bottom, from(transparent), color-stop(.449, transparent), color-stop(.45, rgba(255, 255, 255, .6)), color-stop(.46, rgba(255, 255, 255, .6)), color-stop(.461, transparent), color-stop(.949, transparent), color-stop(.95, rgba(255, 255, 255, .6)), color-stop(.96, rgba(255, 255, 255, .6)), color-stop(.961, transparent), to(transparent)), -webkit-gradient(linear, left top, right bottom, from(transparent), color-stop(.149, transparent), color-stop(.15, rgba(0, 0, 0, .4)), color-stop(.25, rgba(0, 0, 0, .4)), color-stop(.251, transparent), color-stop(.649, transparent), color-stop(.65, rgba(0, 0, 0, .4)), color-stop(.75, rgba(0, 0, 0, .4)), color-stop(.751, transparent), to(transparent)) #3a3a3a;
   background-size: 100% 100%, 200px 200px, 200px 200px;
 }
+min-height: 100%;
 */
 #wrapper {
   width: 300px;
   margin: auto;
-  padding: 60px 0 120px 0;
 }
 
 #clock {
-  position: relative;
+  position: absolute;
   width: 200px;
   height: 200px;
   margin: auto;

@@ -37,6 +37,9 @@ $(document).ready(function() {
     {
       limit : 10
     });
+    
+    
+  //$("#clock").load("clock.html #wrapper");  
 });
 
 

@@ -281,6 +281,12 @@ table { border-collapse: collapse; border-spacing: 0; }
   font-size: 90%;
 }
 
+.coolFontBig {
+  font-family: 'Rock Salt', cursive;
+  font-size: 150%;
+  
+}
+
 .headimg {
   box-shadow: 2px 2px 2px #333333;
   width: 230px;
@@ -367,4 +373,8 @@ div#mark-done:nth-of-type(1) ul li:after{
 
 #myblog-but {
   padding-top: 8px;
+}
+
+#news img {
+  padding-right: 6px;
 }
