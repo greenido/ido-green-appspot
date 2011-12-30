@@ -29,7 +29,7 @@ $(document).ready(function() {
 
   $('#myblog').rssfeed('http://greenido.wordpress.com/feed/',
   {
-    limit : 6
+    limit : 4
   });
   // a bunch of RSS feeds that coming from y! pipes (+caching)
   $('#chromenews').rssfeed(
