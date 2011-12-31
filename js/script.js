@@ -29,7 +29,7 @@ $(document).ready(function() {
 
   $('#myblog').rssfeed('http://greenido.wordpress.com/feed/',
   {
-    limit : 4
+    limit : 3
   });
   // a bunch of RSS feeds that coming from y! pipes (+caching)
   $('#chromenews').rssfeed(
@@ -40,7 +40,7 @@ $(document).ready(function() {
     
     
     $(".tips").tipTip();
-  //$("#clock").load("clock.html #wrapper");  
+  
 });
 
 
