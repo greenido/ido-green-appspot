@@ -39,6 +39,7 @@ $(document).ready(function() {
     });
     
     
+    $(".tips").tipTip();
   //$("#clock").load("clock.html #wrapper");  
 });
 

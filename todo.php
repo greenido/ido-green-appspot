@@ -8,13 +8,13 @@
     <?php
     
     /**
-     * TODO
+     * ToDo:
      * 1. cool demo for web workers + webGL: view-source:http://mrdoob.github.com/three.js/examples/canvas_particles_shapes.html 
      * 2. tutorial on css3 selectors: http://net.tutsplus.com/tutorials/html-css-techniques/the-30-css-selectors-you-must-memorize/
      * 3. css3 cube - http://www.paulrhayes.com/2009-07/animated-css3-cube-interface-using-3d-transforms/
      * 
-     * 4. filter list - http://kilianvalkhof.com/2010/javascript/how-to-build-a-fast-simple-list-filter-with-jquery/
-     * 
+    ** 4. filter list - http://kilianvalkhof.com/2010/javascript/how-to-build-a-fast-simple-list-filter-with-jquery/
+   *** 5. tiptip - for the presentations/demos with nice explanations.
      * 
      * 
      * http://pages.github.com/
