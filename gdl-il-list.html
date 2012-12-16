@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Google Developers Israel (GDL-IL) Episodes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ido Green projets and records from GDL-IL shows'">
+  <meta name="author" content="Ido Green | greenido.wordpress.com | @greenido">
+
+  <!-- checkout one of the great template: http://bradfrost.github.com/this-is-responsive/patterns.html -->
+  <link rel='stylesheet' href='css/yt-list.css'>
+  <link rel='stylesheet' href='http://ido-green.appspot.com/css/bootstrap-responsive.min.css'>
+
+  <script>
+    // Kill alerts, confirmations and prompts
+    window.confirm = function(){};
+    window.prompt  = function(){};
+    window.open    = function(){};
+    window.print   = function(){};
+    window.__canLeave = false;
+
+    window.onbeforeunload = function() {
+      if (!__canLeave) {
+        return "WARNING! You are leaving the safety of Ido's place! Are you sure? ;)";
+      }
+    };
+    setTimeout(function() {
+      window.__canLeave = true;
+    }, 200);
+  </script>
+
+</head>
+<body>
+ 
+  <h2>Google Developers Israel (GDL-IL) Episodes</h2>
+  <div id="pattern" class="pattern">
+    <ul id="videos" class="list img-list">
+    </ul>
+  </div>
+
+<script>
+function showMyVideos(data) {
+  var feed = data.feed;
+  var entries = feed.entry || [];
+  var html = ['<ul>'];
+  for (var i = 0; i < entries.length; i++) {
+    var entry = entries[i];
+    var title = "<div class='li-text'><h4 class='li-head'>" + entry.title.$t + "</h4></div>";
+    var tumb = "<div class='li-img'><img src='" + entry.media$group.media$thumbnail[0].url + "' alt='thumbnail for the video' ></div>";
+    var link = "<a href='" + entry.link[0].href +"' class='inner' target='_blank' />" + tumb + title + "</a>";
+    html.push('<li>', link, '</li>');
+  }
+  html.push('</ul>');
+  var tmpHtml = html.join(' ');
+  document.getElementById('videos').innerHTML = tmpHtml;
+} 
+</script>
+
+  <script src="http://gdata.youtube.com/feeds/api/playlists/PLHciONaEKWuY8k-N_QvgswfMH00SVpqg3/?v=2&alt=json&callback=showMyVideos"></script>
+
+  <!-- 
+  some games with the player and autoamtic playing of the playlist
+<div id="player"></div>
+<script>
+    //Load player api asynchronously.
+    var tag = document.createElement('script');
+    tag.src = "//www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    var done = false;
+    var player;
+    function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          height: '390',
+          width: '640',
+          playerVars: 
+          {
+            listType:'playlist',
+            list: 'PLHciONaEKWuY8k-N_QvgswfMH00SVpqg3'
+          },
+          events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+          }
+        });
+    }
+    function onPlayerReady(evt) {
+        evt.target.playVideo();
+    }
+    function onPlayerStateChange(evt) {
+        if (evt.data == YT.PlayerState.PLAYING && !done) {
+            setTimeout(stopVideo, 6000);
+            done = true;
+        }
+    }
+    function stopVideo() {
+        player.stopVideo();
+    }
+</script>
+
+<h3>GDL Israel</h3>
+<iframe
+    width="560"
+    height="315"
+    src="http://www.youtube.com/embed?listType=playlist&list=PLHciONaEKWuY8k-N_QvgswfMH00SVpqg3&autoplay=1"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+-->
+
+<footer>
+  <div class="row">
+    <div class="span2 tips coolFontBig" title="It's all yours under a   Creative Commons - Have fun and please let me know when/where you use it so I'll be proud of you">Ido Green 2013
+      <div id="plusone">
+        <g:plusone></g:plusone>
+      </div>
+    </div>
+    <div class="span1">
+      <a href="http://greenido.wordpress.com/tag/gdl-il/" target="_blank">
+        <img src="http://greenido.files.wordpress.com/2012/10/screen-shot-2012-10-10-at-2-38-15-pm.png?w=584" alt="GDL IL shows"/>
+      </a>
+    </div>
+    <div class="span1 wooop tips" title="My twitter user @greenido">
+      <a href="https://twitter.com/#!/greenido" target="_blank" >
+        <img src="imgs/twitter64x64.png" width="64px" height="64px"/>
+      </a>
+    </div>
+    <div class="span1 wooop tips" title="Little jump in Colorado">
+      <a href="http://about.me/greenido" target="_blank" >
+        <img src="imgs/in64x64.png" width="64px" height="64px"/>
+      </a>
+    </div>
+    <div class="span1 wooop tips" title="My G+ spot in the world">
+      <a href="http://plus.ly/greenido" target="_blank" >
+        <img src="imgs/g+64x64.png" width="64px" height="64px"></a>
+    </div>   
+    <div class="span1 wooop tips" title="My blog">
+      <a href="http://greenido.wordpress.com/tag/gdl-il/" target="_blank">
+        <img src="imgs/wordpress64x64.png" width="64px" height="64px"></a>
+    </div>
+    <div class="span3 tips" title="HTML5 Powered with Connectivity / Realtime, CSS3 / Styling, Device Access, Graphics, 3D &amp; Effects, Multimedia, Performance &amp; Integration, Semantics, and Offline &amp; Storage (2012 Feb 15) ">
+      <a href="http://www.w3.org/html/logo/" target="_blank" class='w3-logo' >
+        <img src="http://www.w3.org/html/logo/badge/html5-badge-h-connectivity-css3-device-graphics-multimedia-performance-semantics-storage.png" 
+                   width="357" height="64" alt="HTML5 Powered with Connectivity / Realtime, CSS3 / Styling, Device Access, Graphics, 3D &amp; Effects, Multimedia, Performance &amp; Integration, Semantics, and Offline &amp; Storage" ></a>
+    </div>
+  </div>
+</footer>
+
+<script src="http://apis.google.com/js/plusone.js"></script>
+
+<script>
+var _gaq=[['_setAccount','UA-27750723-1'],['_trackPageview']];
+(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+s.parentNode.insertBefore(g,s)}(document,'script'));
+ </script>
+
+</body>
+</html>
