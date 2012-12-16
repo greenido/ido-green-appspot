@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<!--
+  Google HTML5 slide template
+  Authors: Luke Mahé (code)
+           Marcin Wichary (code and design)
+           
+           Dominic Mazzoni (browser compatibility)
+           Charles Chen (ChromeVox support)
+
+  Modifications: Ido Green 5-2011 (idog)
+  URL: http://code.google.com/p/html5slides/
+-->
+ 
+<html>
+    <head>
+        <title>Chrome Apps, Web Store and File APIs</title>
+
+        <meta charset='utf-8'>
+        <script
+        src='http://html5slides.googlecode.com/svn/trunk/slides.js'></script>
+    </head>
+
+    <style>
+        /* Your individual styles here, or just use inline styles if that’s what you want. */
+        .boxcenter {
+            -webkit-box-pack: center;
+            -moz-box-pack: center;
+            box-pack: center;
+        }
+        .vbox {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-box-align: stretch;
+            display: -moz-box;
+            -moz-box-orient: vertical;
+            -moz-box-align: stretch;
+            display: box;
+            box-orient: vertical;
+            box-align: stretch;
+        }
+        .hbox {
+            display: -webkit-box;
+            -webkit-box-orient: horizontal;
+            -webkit-box-align: stretch;
+            display: -moz-box;
+            -moz-box-orient: horizontal;
+            -moz-box-align: stretch;
+            display: box;
+            box-orient: horizontal;
+            box-align: stretch;
+        }
+        .noflex {
+            -webkit-box-flex: 0;
+            -moz-box-flex: 0;
+            box-flex: 0;
+        }
+
+        @-webkit-keyframes pulse {
+            0%   { -webkit-transform: scale(1) rotate(5deg); }
+        50%  { -webkit-transform: scale(1.5) rotate(-15deg);  }
+        100% { -webkit-transform: scale(1) rotate(5deg); }
+        }
+
+        .container {
+            border: solid black 2px; 
+            border-radius: 10px; 
+            -webkit-box-shadow: #222 0px 0px 10px; 
+            background: -webkit-gradient(radial, 64 64, 100, 25 25, 325, from(#00C1FC), to(#0E68CF));
+            height: 200px;
+        }
+
+        .pulse {
+            -webkit-animation-direction: alternate;
+            -webkit-animation-duration: 2s;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-name: pulse;
+            -webkit-animation-timing-function: ease-in-out;
+            text-shadow: black 1px 1px 1px;
+            font-family: Lobster;
+            text-shadow: black 5px 5px 2px;
+            -webkit-transform-origin: 50% 0%;
+        }
+        
+		.chromelogo {
+		  background: white url(imgs/chrome.png) 50% 50% no-repeat;
+		  background-size: 600px;
+		  height: 600px;
+		  position: relative;
+	  	  bottom: 20px;
+		}
+    </style>
+
+    <body style='display: none'>
+
+        <section class='slides layout-regular template-default'>
+
+            <!-- slides -->
+			 
+			 <article>
+			 	<div  class='chromelogo'> </div>
+			 </article>
+			 
+            <article>
+              <!--  <div class="hbox noflex vbox boxcenter" style='height: 100px'>
+                    <img src='imgs/chrome-logo-of.png'/>
+                </div>  -->
+                <h1> Google Chrome <br/>
+                    Apps, Web Store And The New File APIs</h1>
+                    <p>
+                    Ido Green (<a href="http://twitter.com/greenido">@greenido</a>)
+                    <br>
+                    May 31, 2011   
+                    <a href="http://goo.gl/P6OWs">goo.gl/P6OWs</a>
+                    </p>
+           </article>
+
+                    <article>
+                        <h3>Agenda</h3>
+                        <ul> 
+                            <li>Chrome Web Store</li> 
+                            <li>Creating Applications</li> 
+                            <li>Uploading Applications</li> 
+                            <li>The New File/Uploader APIs</li>
+
+                        </ul>
+                        <div class="hbox noflex vbox boxcenter">
+                            <img style='height: 350px' 
+                                 src='http://code.google.com/chrome/apps/images/launcher.png'/>
+                        </div>
+                    </article>
+
+                    <article>
+                        <h3>
+                            Chrome Web Store - Why?
+                        </h3>
+                        <ul class="build">
+                            <li>Discovery</li> 
+                            <li>Distribution</li>
+                            <li>Revenue (95%-5% Rev Share)
+                                <ol>
+                                    <li>Integrated</li>
+                                    <li>Frictionless</li>
+                                    <li>Variety of Payment options</li>
+                                </ol>
+                            </li>
+                        </ul>
+                        <div class="hbox noflex vbox boxcenter">
+                            <img src="imgs/cws-fullscrs.png" />
+                        </div>
+                    </article>
+
+                    <article>
+                        <h3>Integrated and Frictionless</h3>
+                        <ul>
+                            <li>Seamless for users</li>
+                            <li>Seamless for developers</li>
+                            <li class="red">Google handle payments</li>
+                            <li>Provide a <a href="http://code.google.com/chrome/webstore/docs/get_started.html">licensing API</a></li>	
+                        </ul>
+                        <div class="hbox noflex vbox boxcenter">
+                            <img src="imgs/chrome-collage.jpg"/>
+                        </div>
+                    </article>
+
+                    <!-- Create a web app -->
+                    <article>
+                        <h3>
+	          A Web App
+                        </h3>
+                        <p>What should I create?</p>
+                        <ul>
+                            <li>Goal-orientated</li> 
+                            <li>Beautiful</li>
+                            <li>Rich Experience</li>
+                            <li>FAST</li>	
+                        </ul>
+                        </p>
+                        <!--A web application should be task oriented encouraging people to interact, engage, and accomplish something, 
+                        rather than passively view content.  -->
+                        <br/>
+		Leverage the technologies you know and love + new ones: 
+                        App Cache, CSS3, Local Storage, GEO, Video, Audio and more...<br/>
+                        <ul>
+                        <li><a href="http://everytimezone.com/">Every Timezone</a></li>
+                        <li><a href="http://lovelywebapps.blogspot.com/">More Web App Examples</a> </li>
+                        </ul>
+                    </article>
+
+				<article class='fill'>
+				
+					<img src="imgs/everytimezone-scr1.png"/>
+				</article>
+
+
+          <article class='smaller'>
+              <h3>Add Manifest.json</h3>
+              	<section>
+                  <pre>{
+	  "name" : "Todo List",
+	  "description" : "The amazing Todo list - help you getting things done",
+	  "version": "0.0.1",
+	  "icons": {
+	    "24": "logo-24.png", 
+	    "128": "logo-128.png"
+	  },
+	  "permissions": [
+	    "unlimitedStorage", "notification"
+	  ],
+	  "app" : {
+	    "urls": ["http://best-apps4.me/todo/"],
+	    "launch": {
+	      "web_url": "http://best-apps4.me/todo/index.html"
+	    }
+	  }
+}</pre>
+     </section>
+     <a href="http://best-apps4.me/todo/index.html" target="_blank">Todo List Demo</a>
+</article>
+
+
+                    <!-- Upload the App -->
+                    <article>
+                        <h3>
+	          The Chrome Web Store - Upload (0)
+                        </h3>
+                        <p>
+
+                        <ul>
+                            <li>Decide which Google Account you want to be your <strong>developer account</strong></li>
+                            <li>Create a ZIP file that contains: manifest, HTML, JS, CSS and images</li>
+                        </ul>
+                        </p>
+                        <p>
+                            <img src="imgs/cws-1s.png"/ >
+                        </p>
+
+                    </article>
+
+                    <article>
+                        <h3>
+	          The Chrome Web Store - Upload (1)
+                        </h3>
+                        <p>Provide store content</p>
+                        <p>
+                            <img src="imgs/cws-upload-2s.png"/ >
+                        </p>
+
+                    </article>
+
+                    <article>
+                        <h3>
+	          The Chrome Web Store - Upload (2)
+                        </h3>
+                        <p>Provide store content</p>
+                        <p>
+                            <img src="imgs/cws-upload-3s.png"/ >
+                        </p>
+
+                    </article>
+
+                    <article>
+                        <h3>
+	          The Chrome Web Store - Upload (3)
+                        </h3>
+                        <p>Provide store content</p>
+                        <p>
+                            <img src="imgs/cws-upload-4s.png"/ >
+                        </p>
+
+                    </article>
+
+                    <article>
+                        <h3>
+		          The Chrome Web Store - Upload App 
+                        </h3>
+                        <p>
+                        <ul>
+                            <li>Free (default)</li>
+                            <li>Google checkout merchant</li>
+                            <li>Your own solution</li>
+                        </ul>
+                        </p>
+                        <p>
+                            <img src="imgs/cws-app-payment.png"/ >
+                        </p>
+
+                    </article>
+
+
+
+                    <!-- The New File/Uploader APIs -->
+                    <article class='smaller'>
+                        <h3>
+                            chrome.fileBrowserHandler
+                        </h3>
+                        <p>
+                            Use <strong>chrome.fileBrowserHandler</strong> module to extend the Chrome OS file browser. 
+                        </p>
+                        <br/>
+                        <img src="http://code.google.com/chrome/extensions/trunk/images/filebrowserhandler.png"></img>
+
+
+                    </article>
+
+                    <article class='smaller'>
+                        <h3>
+                            File API - Manifest
+                        </h3>
+                        <p>
+	          Declare the "fileBrowserHandler" permission in the extension manifest.
+                        <section>
+                            <pre>{
+"name": "Upload to flickr",
+  ...
+  "file_browser_handlers": [
+    {
+      "id": "upload",
+      "default_title": "Save to flickr", // What the button will display
+      "file_filters": [
+        "filesystem:*.jpg",
+        "filesystem:*.jpeg",
+        "filesystem:*.png"
+      ]
+    }
+  ],
+  "permissions" : [
+    "fileBrowserHandler"
+  ],
+  "icons": { "16": "icon16.png",
+             "48": "icon48.png",
+            "128": "icon128.png" }
+}
+                            </pre>
+                        </section>
+                        </p>
+                    </article>
+
+                    <article class='smaller'>
+                        <h3>
+                            File Uploader JS Example
+                        </h3>
+                        <section><pre>
+        uploadFile: function(file) {
+            var pro1 = document.querySelector('#pro1');
+            var progressBar =  pro1.querySelector('progress');
+            var formData = new FormData();
+            formData.append('file', file);
+
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', this.uploadServer, true);
+
+            xhr.onload = function(e) {
+                if (this.status == 200) {
+                    console.log(this.response);
+                    alert("The image is safe in Flickr " + this.response);
+                }
+            };
+
+            xhr.onerror = function(e) {
+                console.log(this, this.status, this.responseText, 
+			    this.getAllResponseHeaders())
+            };
+
+            xhr.send(formData);
+        },
+...</pre>
+                        </section>
+                    </article>
+
+                    <article>
+                        <div class="hbox noflex vbox boxcenter">
+                            <h1>Thank You!</h1>
+                            <img src="imgs/qa.jpg"/>
+                        </div>
+                        <p>
+
+                        <ul>
+                            <li><a href="http://www.html5rocks.com/">http://www.html5rocks.com</li>
+                            <li><a href="http://code.google.com/chrome" class="yellow">http://code.google.com/chrome</a></li>
+                            <li><a href="http://code.google.com/chrome/apps/docs/developers_guide.html">Developers Guide To Chrome Apps</a></li>
+							<li><a href="http://ido-green.appspot.com/meetup-webStore-fileAPI-5-31-2011.html">Chrome Apps, Web Store and File APIs</li>
+                        </ul>
+                        </p>
+                    </article>
+
+ 		<script>
+          var _gaq=[['_setAccount','UA-2230417-24'],['_trackPageview'],['_trackPageLoadTime']];
+          (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+          g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+          s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+        
+  </body>
+</html>
