@@ -26,7 +26,27 @@ $(document).ready(function() {
     return false;
   });
   
+  // do more/less on slides column
+  $("#more-pre").hide();
+  $('#less-pre-but').hide();
+  
+  $('#more-pre-but').click(function() {
+     $('#more-pre').show('slow');
+     $('#less-pre-but').show();
+     $('#more-pre-but').hide('slow');
+     return false;
+   });
 
+   // hides the slickbox on clicking the noted link  
+   $('#less-pre-but').click(function() {
+     $('#more-pre').hide('fast');
+     $('#more-pre-but').show('fast');
+     $('#less-pre-but').hide();
+     return false;
+   });  
+
+
+   // show the summary of news from chrome/chromeOS/html5
   $('#myblog').rssfeed('http://greenido.wordpress.com/feed/',
   {
     limit : 3
