@@ -414,8 +414,33 @@ div#mark-done:nth-of-type(1) ul li:after{
 }
 
 .bottom-boxes {
-    padding-top: 1em;
+  padding-top: 1em;
 	border-top-color: rgba(39, 13, 13, 0.14);
 	border-top-width: 2px;
-    border-top-style: solid;
+  border-top-style: solid;
 }
+
+/*
+Our nice heart effect for the runners
+*/
+@keyframes pound {
+  to { transform: scale(1.8);  }
+}
+@-webkit-keyframes pound {
+  to { -webkit-transform: scale(1.8); }
+}
+
+.heart {
+  display: inline-block;
+  font-size: 1.2em;
+  color: rgba(60, 11, 11, 0.4);
+  -webkit-animation: pound 1.3s infinite alternate;
+  -webkit-transform-origin: center;
+  animation: pound 1.3s infinite alternate;
+  transform-origin: center;
+  position: relative;
+  right: 0.7em;
+  bottom: 1.4em;
+}
+
+body { text-align: center; }
