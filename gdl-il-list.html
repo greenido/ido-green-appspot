@@ -8,7 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Ido Green projets and records from GDL-IL shows'">
   <meta name="author" content="Ido Green | greenido.wordpress.com | @greenido">
-
+  
+  <link rel="stylesheet" href="css/bootstrap.min.css">
   <!-- checkout one of the great template: http://bradfrost.github.com/this-is-responsive/patterns.html -->
   <link rel='stylesheet' href='css/yt-list.css'>
   <link rel='stylesheet' href='http://ido-green.appspot.com/css/bootstrap-responsive.min.css'>
@@ -34,11 +35,73 @@
 </head>
 <body>
  
+   <div class="navbar navbar-fixed-top">
+          <div class="navbar-inner">
+            <div class="navcontainer">
+              <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </a>
+              <a class="brand" href="http://ido-green.appspot.com/">
+                <span class="coolFont">Ido's Hack Space</span>
+              </a>
+              <div class="nav-collapse">
+                <ul class="nav">
+                  <li class="active">
+                    <a href="http://ido-green.appspot.com/">Home</a>
+                  </li>
+                  <li>
+                    <a href="http://ido-green.appspot.com/">Presentations & Code</a>
+                  </li>
+
+                  <ul class="nav pull-right">
+
+                    <li class="divider-vertical"></li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        Other Stuff <b class="caret"></b>
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a href="http://about.me/greenido" target="_blank">About</a>
+                        </li>
+                        <li>
+                          <a href="http://plus.ly/greenido" target="_blank">+greenido</a>
+                        </li>
+                        <li>
+                          <a href="https://twitter.com/#!/greenido" target="_blank">@greenido</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li class="nav-header">Posts & Code</li>
+                        <li>
+                          <a href="https://github.com/greenido" target="_blank">GitHub</a>
+                        </li>
+                        <li>
+                          <a href="http://greenido.wordpress.com/" target="_blank">My blog</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+
+                  <li>
+                    <div id="plusone">
+                      <g:plusone></g:plusone>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <!--/.nav-collapse --> </div>
+          </div>
+        </div>
+
+  <div class="hero-unit">
   <h2>Google Developers Israel (GDL-IL) Episodes</h2>
   <div id="pattern" class="pattern">
     <ul id="videos" class="list img-list">
     </ul>
   </div>
+ </div>
 
 <script>
 function showMyVideos(data) {
@@ -57,65 +120,11 @@ function showMyVideos(data) {
   document.getElementById('videos').innerHTML = tmpHtml;
 } 
 </script>
-
-  <script src="http://gdata.youtube.com/feeds/api/playlists/PLHciONaEKWuY8k-N_QvgswfMH00SVpqg3/?v=2&alt=json&callback=showMyVideos"></script>
-
-  <!-- 
-  some games with the player and autoamtic playing of the playlist
-<div id="player"></div>
-<script>
-    //Load player api asynchronously.
-    var tag = document.createElement('script');
-    tag.src = "//www.youtube.com/iframe_api";
-    var firstScriptTag = document.getElementsByTagName('script')[0];
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-    var done = false;
-    var player;
-    function onYouTubeIframeAPIReady() {
-        player = new YT.Player('player', {
-          height: '390',
-          width: '640',
-          playerVars: 
-          {
-            listType:'playlist',
-            list: 'PLHciONaEKWuY8k-N_QvgswfMH00SVpqg3'
-          },
-          events: {
-            'onReady': onPlayerReady,
-            'onStateChange': onPlayerStateChange
-          }
-        });
-    }
-    function onPlayerReady(evt) {
-        evt.target.playVideo();
-    }
-    function onPlayerStateChange(evt) {
-        if (evt.data == YT.PlayerState.PLAYING && !done) {
-            setTimeout(stopVideo, 6000);
-            done = true;
-        }
-    }
-    function stopVideo() {
-        player.stopVideo();
-    }
-</script>
-
-<h3>GDL Israel</h3>
-<iframe
-    width="560"
-    height="315"
-    src="http://www.youtube.com/embed?listType=playlist&list=PLHciONaEKWuY8k-N_QvgswfMH00SVpqg3&autoplay=1"
-    frameborder="0"
-    allowfullscreen
-></iframe>
--->
+<script src="http://gdata.youtube.com/feeds/api/playlists/PLHciONaEKWuY8k-N_QvgswfMH00SVpqg3/?v=2&alt=json&callback=showMyVideos"></script>
 
 <footer>
   <div class="row">
     <div class="span2 tips coolFontBig" title="It's all yours under a   Creative Commons - Have fun and please let me know when/where you use it so I'll be proud of you">Ido Green 2013
-      <div id="plusone">
-        <g:plusone></g:plusone>
-      </div>
     </div>
     <div class="span1">
       <a href="http://greenido.wordpress.com/tag/gdl-il/" target="_blank">
@@ -149,6 +158,9 @@ function showMyVideos(data) {
 </footer>
 
 <script src="http://apis.google.com/js/plusone.js"></script>
+   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.2.min.js"><\/script>')</script>
+  <script src="js/libs/bootstrap/bootstrap.min.js"></script>
 
 <script>
 var _gaq=[['_setAccount','UA-27750723-1'],['_trackPageview']];
