@@ -1,555 +1,780 @@
 <!doctype html>
 <!--[if lt IE 7]>
 <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en">
-  <![endif]-->
-  <!--[if IE 7]>
-  <html class="no-js lt-ie9 lt-ie8" lang="en">
-    <![endif]-->
-    <!--[if IE 8]>
-    <html class="no-js lt-ie9" lang="en">
-      <![endif]-->
-      <!--[if gt IE 8]>
-      <!-->
-      <html class="no-js" lang="en">
-        <!--<![endif]-->
-<head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8" lang="en">
+<![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9" lang="en">
+<![endif]-->
+<!--[if gt IE 8]>
+<!-->
+<html class="no-js" lang="en">
+	<!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-        <title>Ido Green - ChromeOS, HTML5 and Chromebook (Cool) Stuff</title>
-        <meta name="description" content="Ido Green projets and presentations from Conferances, Google Developers Live Israel (=GDL-IL), Talks, GTUGs, GDD etc'">
-        <meta name="author" content="Ido Green | greenido.wordpress.com | @greenido">
-        <meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>Ido Green - Cloud, Chrome, HTML5 and Cool Stuff</title>
+		<meta name="description"
+		content="Ido Green projets and presentations from Conferances, Google Developers Live Israel (=GDL-IL), Talks, GTUGs, GDD etc'">
+		<meta name="author" content="Ido Green | greenido.wordpress.com | @greenido">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
 
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
-        <link rel="stylesheet" href="css/rssfeed.css">
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/tipTip.css">
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+		<link rel="stylesheet" href="css/rssfeed.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/tipTip.css">
 
-        <link rel="shortcut icon" href="imgs/favicon.ico">
-        <link rel="apple-touch-icon" href="imgs/apple-touch-57x57.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="imgs/apple-touch-72x72.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="imgs/apple-touch-114x114.png">
+		<link rel="shortcut icon" href="imgs/favicon.ico">
+		<link rel="apple-touch-icon" href="imgs/apple-touch-57x57.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="imgs/apple-touch-72x72.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="imgs/apple-touch-114x114.png">
 
-        <script src="js/libs/modernizr-2.5.3-respond-1.1.0.min.js"></script>
-</head>
-<body>
-        <!--[if lt IE 7]>
-        <p class=chromeframe>
-          Your browser is <em>ancient! C'mon dude get Chrome and be happy!</em>
-          <a href="http://browsehappy.com/">Upgrade to a different browser</a>
-          or
-          <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a>
-          to experience this site.
-        </p>
-        <![endif]-->
+		<script src="js/libs/modernizr-2.5.3-respond-1.1.0.min.js"></script>
+	</head>
+	<body>
+		<!--[if lt IE 7]>
+		<p class=chromeframe>
+		Your browser is <em>ancient! C'mon dude get Chrome and be happy!</em>
+		<a href="http://browsehappy.com/">Upgrade to a different browser</a>
+		or
+		<a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a>
+		to experience this site.
+		</p>
+		<![endif]-->
 
-        <div class="navbar navbar-fixed-top">
-          <div class="navbar-inner">
-            <div class="container">
-              <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </a>
-              <a class="brand" href="#">
-                <span class="coolFont">Ido's Hack Space</span>
-              </a>
-              <div class="nav-collapse">
-                <ul class="nav">
-                  <li class="active">
-                    <a href="#">Home</a>
-                  </li>
-                  <li>
-                    <a href="#mark-done">Presentations</a>
-                  </li>
-                  <li>
-                    <a href="#codehacking">Code</a>
-                  </li>
-                  <li>
-                    <a href="#news" >News</a>
-                  </li>
-                  <li>
-                   <a href="gdl-il-list.html">GDL-IL</a>
-                  </li>
-                  
-                  <ul class="nav pull-right">
+		<div class="navbar navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="container">
+					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span
+					class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a><a
+					class="brand" href="#"> <span class="coolFont">Ido's Hack Space</span> </a>
+					<div class="nav-collapse">
+						<ul class="nav">
+							<li class="active">
+								<a href="#">Home</a>
+							</li>
+							<li>
+								<a href="#mark-done">Presentations</a>
+							</li>
+							<li>
+								<a href="#codehacking">Code</a>
+							</li>
+							<li>
+								<a href="#news">Projects</a>
+							</li>
+							<li>
+								<a href="gdl-il-list.html">GDL-IL</a>
+							</li>
 
-                    <li class="divider-vertical"></li>
-                    <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        Other Stuff <b class="caret"></b>
-                      </a>
-                      <ul class="dropdown-menu">
-                        <li>
-                          <a href="http://about.me/greenido" target="_blank">About</a>
+							<ul class="nav pull-right">
+
+								<li class="divider-vertical"></li>
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown"> Other Stuff <b class="caret"></b> </a>
+									<ul class="dropdown-menu">
+										<li>
+											<a href="http://about.me/greenido" target="_blank">About</a>
+										</li>
+										<li>
+											<a href="http://plus.ly/greenido" target="_blank">+greenido</a>
+										</li>
+										<li>
+											<a href="https://twitter.com/#!/greenido" target="_blank">@greenido</a>
+										</li>
+										<li class="divider"></li>
+										<li class="nav-header">
+											Posts & Code
+										</li>
+										<li>
+											<a href="https://github.com/greenido" target="_blank">GitHub</a>
+										</li>
+										<li>
+											<a href="http://greenido.wordpress.com/" target="_blank">My blog</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+
+							<li>
+								<div id="plusone">
+									<g:plusone></g:plusone>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<!--/.nav-collapse -->
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+
+			<!-- Main hero unit for a primary marketing message or call to action -->
+			<div class="hero-unit">
+				<h1>Ido's Projects</h1>
+				<p>
+					<img src="http://ido-green.appspot.com/html5-ChromeOS-9-5-2011/images/html5+chrome.jpg"
+					alt="Html5 and Chrome love story" class="headimg" /> Here you will find all the projects
+					I'm pushing around the Cloud, Chrome, HTML5 and cool web development. At Google I/O 2013
+					- You can enjoy lots of great content. One (little) example is <a
+					href="https://developers.google.com/events/io/sessions/333067828"> "Mobile, Web and
+					Cloud - The Triple Crown of Modern Applications" </a> This talk discusses the latest in Google
+					cloud platform: Cloud Endpoints and its interation with mobile web app patterns that
+					leverage the cutting edge HTML5 APIs.
+					<br />
+					You can <a href="http://picturesque-app.appspot.com">play
+					with our mobile web app</a> from your phone and take photos even when you don't have
+					connection ;)<span id="more-head-but"> <a class="btn primary"> <i
+						class="icon-repeat"></i> More &raquo;</a> </span>
+				</p>
+				<div id="more-head">
+					<p style="text-align: center">
+						<iframe width="640" height="360" src="http://www.youtube.com/embed/6_oO9Gwf_do"
+						frameborder="0" allowfullscreen></iframe>
+						<br>
+						More on a <a
+						href="http://greenido.wordpress.com/2013/05/16/google-io-2013-mobile-web-and-cloud-the-triple-crown-of-modern-applications" />
+						blog post on this talk<a>.
+					</p>
+					<p>
+						<a href="http://ido-green.appspot.com/gdl-il-list.html"> <img
+						src="http://greenido.files.wordpress.com/2013/01/screen-shot-2013-01-02-at-7-18-05-pm.png?w=210&h=190"
+						style="float: left; height: 128px; border-radius: 50%; margin-right: 1em;"
+						alt="gdl-il shows"> </a>Psst... I've started around Sep 2012 to run a weekly show on <a
+						href="http://developers.google.com/live/" target="_blank"> Google Developers Live</a>
+						every WED at 14:00 Israel time. We covered new technologies (e.g. Web Components, HTML5
+						APIs), cool startups from around the world and any other topic you wish to talk about (and
+						which is related to our topics :) It's a hangout - so feel free to join us live.
+						<br />
+						Here are some of the <a href="http://ido-green.appspot.com/gdl-il-list.html">GDL-IL
+						past episodes.</a> If you like to learn with videos you can find some tutorials I've records
+						at <a href="http://greenido.wordpress.com/chrome/" target="_blank">my Blog Chrome
+						section</a><span id="less-head-but"> <a class="btn primary">Less &laquo;</a> </span>
+					</p>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="span4" id="mark-done">
+					<h2>Presentations</h2>
+
+					<p>
+						<img src='imgs/tutorials.png' align="left" /> List of Talks from Conferences, Google
+						Developers Days, GTUGs, Meetups and everything in between.
+					</p>
+
+					<ul>
+						<li>
+						<a href="http://www.slideshare.net/greenido/google-platform-overview-april-2014" class="tips" 
+						   title="Google APIs, Services and Platform Update - April 2014" 
+						   target="_blank">Google APIs Update (April 2014)</a>
+						</li>
+						
+						<li>
+						<a href="http://www.slideshare.net/greenido/idos-paris-google-cloud-storage-backup-and-archive" class="tips" 
+						   title="Covering how to work on migrating, backups and archive your important data to GCS: Copying/Migrating Data, Object Composition and Durable Reduced Availability Storage" 
+						   target="_blank">Google Cloud Storage backup and archive (Feb 2014)</a>
+						</li>
+						
+						<li>
+						<a href="http://www.slideshare.net/greenido/memcache-basics-on-google-app-engine" class="tips" 
+						   title="What is Memcache? Why do we need Memcache? How to Use Memcache on Google App Engine? Caveats And Solutions" 
+						   target="_blank">Memcache basics on google app engine (Feb 2014)</a>
+						</li>
+						
+						<li>
+						<a href="http://www.slideshare.net/greenido/idos-paris-big-query-basics" class="tips" title="The macro view on Big Query: We started with an overview, some typical uses and moved to 
+						   project hierarchy, access control and security.  In the end we touch about tools and demos." 
+						   target="_blank">Big Query Basics (Feb 2014)</a>
+						</li>
+						
+						
+						
+						
+						<li>
+						<a href="https://www.slideshare.net/greenido/gdl-il-overviewgaeothers" class="tips" 
+						   title="Google Cloud Platform Update for devFest event in Campus TLV" 
+						   target="_blank">Google Cloud Platform Update (Dec 2013)</a>
+						</li>
+						
+						<li>
+							<a href="mwa-start/index.html" target="_blank" class="tips"
+							title="A talk on Mobile Web Apps Stack - An updated versionwith mobile-specific tips and sweet demos"> 
+							Mobile web apps stack (Sep 2013)</a>
+						</li>
+						
+						<li>
+                            <a href="http://www.slideshare.net/greenido/web-rtc-the-wow-with-demos-gdlil"
+                            title="WebRTC Updates on GDL Israel" target="_blank"> WebRTC Updates (August 2013) </a>
+
+						</li>
+						<li>
+                            <a href="http://www.slideshare.net/greenido/startups-tips-in-iltechtalks"
+                            title="Startups Tips talk in IL Tech Talks meetup" target="_blank"> Startups Tips (July 2013) </a>
                         </li>
-                        <li>
-                          <a href="http://plus.ly/greenido" target="_blank">+greenido</a>
-                        </li>
-                        <li>
-                          <a href="https://twitter.com/#!/greenido" target="_blank">@greenido</a>
-                        </li>
-                        <li class="divider"></li>
-                        <li class="nav-header">Posts & Code</li>
-                        <li>
-                          <a href="https://github.com/greenido" target="_blank">GitHub</a>
-                        </li>
-                        <li>
-                          <a href="http://greenido.wordpress.com/" target="_blank">My blog</a>
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
 
-                  <li>
-                    <div id="plusone">
-                      <g:plusone></g:plusone>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-              <!--/.nav-collapse --> </div>
-          </div>
-        </div>
+						<li>
+							<a href="http://www.slideshare.net/greenido/2013-05-modern-web-applications-utilizing-html5-apis"
+							title="Modern Web Applications Utilizing HTML5 APIs" target="_blank"> Modern Web Applications Utilizing HTML5 APIs (May 2013) </a>
+						</li>
 
-        <div class="container">
+						<li
+						style="background: yellow; padding-top: 5px; padding-bottom: 5px; padding-right: 5px; border-radius: 8px;">
+							<a
+							href="https://picturesque-app.appspot.com/slides" target="_blank" class="tips"
+							title="A talk from Google I/O 2013 - 'Mobile, Web and Cloud - The Triple Crown of Modern Applications'"> Mobile, Web and Cloud - The Triple Crown of Modern Applications (May 2013)</a>
+						</li>
 
-          <!-- Main hero unit for a primary marketing message or call to action -->
-          <div class="hero-unit">
-            <h1>Ido's Projects and Presentations</h1>
-            <p>
-              <img src="http://ido-green.appspot.com/html5-ChromeOS-9-5-2011/images/html5+chrome.jpg" 
-               alt="Html5 and Chrome love story" class="headimg" />
-              Here you will find all the projects I'm pushing around 
-              ChromeOS, HTML5, Chromebook and cool web development.
-              After Google I/O 2012 - You can enjoy lots of great content. One (little) example
-              is <a href="https://developers.google.com/events/io/sessions/gooio2012/304/">
-              "HTML5 and App Engine: The Epic Tag Team Take on Modern Web Apps at Scale"
-              </a>
-              This talk discusses the latest and greatest application patterns and toolset for building cutting edge HTML5 applications 
-              that are backed by App Engine. 
-              This makes it incredibly easy to write an app that spans client and server; in particular, 
-              authentication just works out of the box. This talk walks through building a fantastic cloud-based HTML5 application
-              <br/>
-              <span id="more-head-but">
-                <a class="btn primary">More &raquo;</a>
-              </span>
-            </p>
-            <div id="more-head">
-              <p>
-                <a href="http://ido-green.appspot.com/gdl-il-list.html">
-                <img src="http://greenido.files.wordpress.com/2013/01/screen-shot-2013-01-02-at-7-18-05-pm.png?w=210&h=190" 
-                    style="float: left; height: 128px; border-radius: 50%; margin-right: 1em;" alt="gdl-il shows">
-                </a>
-                I've started around Sep 2012 to run a weekly show on <a href="http://developers.google.com/live/" target="_blank">
-                Google Developers Live</a> every WED at 14:00 Israel time. We covered new technologies (e.g. Web Components, HTML5 APIs), cool startups from around the world and
-                any other topic you wish to talk about (and which is related to our topics :) It's a hangout - so feel free to join us live.
-                <br/>
-                Here are some of the <a href="http://ido-green.appspot.com/gdl-il-list.html">GDL-IL past episodes.</a>
-                
-                If you like to learn with videos you can find some tutorials I've records at
-                <a href="http://greenido.wordpress.com/chrome/" target="_blank">my Blog Chrome section</a>
-                <span id="less-head-but">
-                  <a class="btn primary">Less &laquo;</a>
-                </span>
-              </p>
-            </div>
+						<li>
+							<a href="mwa-html5/index.html" target="_blank" class="tips"
+							title="A talk on Mobile Web Apps Stack - Learn what it takes to build modern mobile web apps. We will start with the ideas of 'adaptive apps' and 'offline first'. Next, we'll dive into some of the technologies, including MVC frameworks, templating engines, CSS frameworks, laying out views and multi-touch input. Finally, we'll close off with mobile-specific tips and sweet demos"> Mobile web apps stack (March 2013)</a>
+						</li>
+						
+						<span id="more-pre-but"> <a class="btn primary"><i class="icon-repeat"></i> More Slides &raquo;</a> </span>
 
-          </div>
+						<div id="more-pre" >
+							
+						<li>
+							<a href="html5-cle-devcon/index.html" target="_blank" class="tips"
+							title="A talk HTML5 APIs And Google Cloud End Points - DevCon TLV 2013"> HTML5 &
+							Cloud End Points - DevCon TLV (Feb 2013)</a>
+						</li>
+						<li>
+							<a href="webcomp_html_il/index.html" target="_blank" class="tips"
+							title="A talk to HTML_IL first meetup on web components and HTML5 APIs"> Web
+							Components - HTML-IL Meetup (Jan 2013)</a>
+						</li>
 
-          <div class="row">
-            <div class="span4" id="mark-done">
-              <h2>Presentations</h2>
+						<li>
+							<a href="html5-webComp/index.html" target="_blank" class="tips"
+							title="A talk from GDL-IL on web components (slide 60+) and the latest HTML5 APIs"> HTML5 APIs and Web Components (Jan 2013)</a>
+						</li>
+							<li>
+								<a href="html5fest-il/index.html" target="_blank" class="tips"
+								title="A talk on the latest features in HTML5 in HTML5Fest Israel"> HTML5FEST
+								Israel (Nov 2012)</a>
+							</li>
 
-              <p>
-                <img src='imgs/tutorials.png' align="left" />
-                List of Talks from Conferences, Google Developers Days, GTUGs, Meetups and everything
-            in between.
-              </p>
-              
-              <ul>   
-               <li>
-                    <a href="webcomp_html_il/index.html" target="_blank" class="tips" 
-                    title="A talk to HTML_IL first meetup on web components and HTML5 APIs">
-                    Web Components - HTML-IL Meetup (Jan 2013)</a>
-                </li>
-                
-                <li>
-                    <a href="html5-webComp/index.html" target="_blank" class="tips" 
-                    title="A talk from GDL-IL on web components (slide 60+) and the latest HTML5 APIs">
-                    HTML5 APIs and Web Components (Jan 2013)</a>
-                </li>
-                
-                <li>
-                    <a href="html5fest-il/index.html" target="_blank" class="tips" title="A talk on the latest features in HTML5 in HTML5Fest Israel">
-                    HTML5FEST Israel (Nov 2012)</a>
-                </li>
-              
-                <li>
-                    <a href="html5-devtools-cros/index.html" target="_blank" class="tips" title="A talk on the latest features in HTML5 and Chrome Devtools and (of course) ChromeOS updates">
-                    HTML5, DevTools & ChromeOS Updates (Nov 2012)</a>
-                </li>
-                
-                <li>
-                    <a href="2012_09_12_devcon-html5-big-data.html" target="_blank" class="tips" title="A talk from devcon Tel Aviv. See how you can use Big Query, Google Cloud End Point and HTML5 to your apps. Be a hero!">
-                    Big Data And HTML5 - DevCon TLV (Sep 2012)</a>
-                </li>
-                
-                <li>
-                  <a href="mwa-html5/index.html" target="_blank" class="tips" title="A webcast with Oreilly - Modern web apps are rich, interactive applications. This webcast will cover new techniques for building modern web apps and how to utilize the latest HTML5 APIs to create a new class of web apps that will delight and amaze your users">
-                    Creating Modern Web Applications Utilizing HTML5 APIs (Aug 2012)
-                  </a>
-                </li>
+							<li>
+								<a href="html5-devtools-cros/index.html" target="_blank" class="tips"
+								title="A talk on the latest features in HTML5 and Chrome Devtools and (of course) ChromeOS updates"> HTML5, DevTools & ChromeOS Updates (Nov 2012)</a>
+							</li>
 
-                <li>
-                  <a href="html5can/index.html" target="_blank" class="tips" title="This talk discusses the latest and greatest in HTML5 as of the summer of 2012">
-                    My take on Eric B. - "The Web Can Do That!?" presentation from Google I/O 2012  (Aug 2012)
-                  </a>
-                </li>
-                
-                <li>
-                  <a href="CloudEndpoints/CloudEndpointsWebBlogPost.html" target="_blank" class="tips" 
-              title="Brad Abrams and I had a great time doing this session: 'HTML5 and App Engine: The Epic Tag Team Take on Modern Web Apps at Scale' at Google I/O 2012. 
-               Here is a little walkthrough on ‘how to built it’ from zero to hero in less then 60 minutes.">
-                    Google I/O 2012 - Full Article On HTML5 Modern Web App and Google Cloud Endpoints (July 2012)
-                  </a>
-                </li>
+							<li>
+								<a href="2012_09_12_devcon-html5-big-data.html" target="_blank" class="tips"
+								title="A talk from devcon Tel Aviv. See how you can use Big Query, Google Cloud End Point and HTML5 to your apps. Be a hero!"> Big Data And HTML5 - DevCon TLV (Sep 2012)</a>
+							</li>
 
-                <li>
-                  <a href="304-HTML5-App-engine.pdf" target="_blank" class="tips" title="This talk discusses the latest and greatest application patterns and toolset for building cutting edge HTML5 applications that are backed by App Engine. This makes it incredibly easy to write an app that spans client and server; in particular, authentication just works out of the box. This talk walks through building a fantastic cloud-based HTML5 application">
-                    Google I/O 2012 - HTML5 and App Engine: The Epic Tag Team Take on Modern Web Apps at Scale (June 2012)
-                  </a>
-                </li>
+							<li>
+								<a href="mwa-html5/index.html" target="_blank" class="tips"
+								title="A webcast with Oreilly - Modern web apps are rich, interactive applications. This webcast will cover new techniques for building modern web apps and how to utilize the latest HTML5 APIs to create a new class of web apps that will delight and amaze your users"> Creating Modern Web Applications Utilizing HTML5 APIs (Aug 2012) </a>
+							</li>
 
-                <li>
-                  <a href="Google_Cloud_Platform_Technical_May_2012.pdf" target="_blank" class="tips" title="A talk I gave in Google Week Israel May 2012 - It's about the new/improved Google Cloud Services: Google App Engine, Big Query and why you should check this powerful technology">Google Cloud Services (June 2012)</a>
-                </li>
-                <li>
-                  <a href="http://www.oreillynet.com/pub/e/2295" target="_blank" class="tips" title="Learn what it takes to build modern mobile web apps. In this webcast presented by Ido Green, author of Web Workers, will start with the ideas of 'adaptive apps' and 'offline first'. Next, we'll dive into some of the technologies, including MVC frameworks, templating engines, CSS frameworks, laying out views and multi-touch input. Finally, we'll close off with mobile-specific tips.">Mobile Web App HTML5 Stack - Recorded Webcast (May 2012)</a>
-                </li>
-                <li>
-                  <a href="http://ido-green.appspot.com/html5-training-day/mobile-web-app-oreilly/index.html" 
-              target="_blank" 
-              class="tips" title="A presentation on Mobile Web Apps Stack - made for a webcast of O'reilly">Mobile web app HTML5 stack (May 2012)</a>
-                </li>
+							<li>
+								<a href="html5can/index.html" target="_blank" class="tips"
+								title="This talk discusses the latest and greatest in HTML5 as of the summer of 2012"> My take on Eric B. - "The Web Can Do That!?" presentation from Google I/O 2012 (Aug
+								2012) </a>
+							</li>
 
-                <li>
-                  <a href="http://ido-green.appspot.com/GDD11/main.html" target="_blank" 
-                 class="tips" title="Five presentations from previous talks I gave in Google develoer days 2011 (Tel Aviv and Berlin) and JPR2012 conferance">
-                 <b>The Edge of HTML5, Offline & DevTool</b> (April 2012)</a>
-                </li>
+							<li>
+								<a href="CloudEndpoints/CloudEndpointsWebBlogPost.html" target="_blank"
+								class="tips"
+								title="Brad Abrams and I had a great time doing this session: 'HTML5 and App Engine: The Epic Tag Team Take on Modern Web Apps at Scale' at Google I/O 2012.
+								Here is a little walkthrough on how to built it from zero to hero in less then 60 minutes."> Google I/O 2012 - Full Article On HTML5 Modern Web App and Google Cloud Endpoints
+								(July 2012) </a>
+							</li>
 
-                <li>
-                  <a href="http://ido-green.appspot.com/chromeOS-5min/index.html" target="_blank" 
-              class="tips" title="Chromebooks are built and optimized for the web, where you already spend most of your computing time. In this short talk we will see why it's such a powerful device/solution">ChromeOS in 5min (March 2012)</a>
-                </li>
+							<li>
+								<a href="304-HTML5-App-engine.pdf" target="_blank" class="tips"
+								title="This talk discusses the latest and greatest application patterns and toolset for building cutting edge HTML5 applications that are backed by App Engine. This makes it incredibly easy to write an app that spans client and server; in particular, authentication just works out of the box. This talk walks through building a fantastic cloud-based HTML5 application"> Google I/O 2012 - HTML5 and App Engine: The Epic Tag Team Take on Modern Web Apps at
+								Scale (June 2012) </a>
+							</li>
 
-                <li>
-                  <a href="http://jpr12ns.appspot.com/" target="_blank" 
-                 class="tips" title="Four talks I gave at Java Posse 2012 - Pssst... there is one on my failed startup story, which you might like.">
-                 <b>My JPR12 Talks: A Failed Startup Story, Chrome DevTools and WebApps</b> (March 2012)</a>
-                </li>
-                
-                
-                <li>
-                  <a href="http://ido-green.appspot.com/html5-training-day/great-web-app/index.html" target="_blank" 
-              class="tips" title="Web developers have nearly perfected their skill at building great web sites, but everything is shifting towards building apps.  We'll take a look at what defines a great Web App and show you how you can use HTML5 to create a new breed of web application that will delight and amaze your users.">
-              A new breed of web apps (March 2012)</a>
-                </li>
+							<li>
+								<a href="Google_Cloud_Platform_Technical_May_2012.pdf" target="_blank"
+								class="tips"
+								title="A talk I gave in Google Week Israel May 2012 - It's about the new/improved Google Cloud Services: Google App Engine, Big Query and why you should check this powerful technology">Google
+								Cloud Services (June 2012)</a>
+							</li>
+							<li>
+								<a href="http://www.oreillynet.com/pub/e/2295" target="_blank" class="tips"
+								title="Learn what it takes to build modern mobile web apps. In this webcast presented by Ido Green, author of Web Workers, will start with the ideas of 'adaptive apps' and 'offline first'. Next, we'll dive into some of the technologies, including MVC frameworks, templating engines, CSS frameworks, laying out views and multi-touch input. Finally, we'll close off with mobile-specific tips.">Mobile
+								Web App HTML5 Stack - Recorded Webcast (May 2012)</a>
+							</li>
 
-                <li>
-                  <a href="http://ido-green.appspot.com/html5-training-day/mobile-web-app/index.html" target="_blank" 
-              class="tips" title="A presentation on Mobile Web Apps Stack - from HTML5 Training Day 2012 TLV. Learn what it takes to build modern mobile web apps. We will start with the ideas of "adaptive apps" and "offline first". Next, we'll dive into some of the technologies, including MVC frameworks, templating engines, CSS frameworks, laying out views and multi-touch input. Finally, we'll close off with mobile-specific tips and sweet demos">
-              Mobile web app HTML5 stack (March 2012)</a>
-                </li>
+							<li>
+								<a
+								href="http://ido-green.appspot.com/html5-training-day/mobile-web-app-oreilly/index.html"
+								target="_blank" class="tips"
+								title="A presentation on Mobile Web Apps Stack - made for a webcast of O'reilly">Mobile
+								web app HTML5 stack (May 2012)</a>
+							</li>
 
-              <span id="more-pre-but">
-                <a class="btn primary">More Slides &raquo;</a>
-              </span>
+							<li>
+								<a href="http://ido-green.appspot.com/GDD11/main.html" target="_blank"
+								class="tips"
+								title="Five presentations from previous talks I gave in Google develoer days 2011 (Tel Aviv and Berlin) and JPR2012 conferance"> <b>The Edge of HTML5, Offline & DevTool</b> (April 2012)</a>
+							</li>
 
-              <div id="more-pre">
-                <li>
-                  <a href="http://ido-green.appspot.com/ChromeOS_HTML5_March_2012.pdf" target="_blank" 
-              class="tips" title="A (PDF) presentation on the current state of Chrome, Chrome Web Store and ChromeOS">The State of ChromeOS (March 2012)</a>
-                </li>
+							<li>
+								<a href="http://ido-green.appspot.com/chromeOS-5min/index.html" target="_blank"
+								class="tips"
+								title="Chromebooks are built and optimized for the web, where you already spend most of your computing time. In this short talk we will see why it's such a powerful device/solution">ChromeOS
+								in 5min (March 2012)</a>
+							</li>
 
-                <li>
-                  <a href="http://ido-green.appspot.com/html5-training-day/mobile-web-app/index.html" target="_blank" 
-                 class="tips" title="A talk I gave in DevCon TLV 2012 - It's include: what it takes to build modern mobile web apps. from ideas of adaptive apps and offline first to some of the technologies: JS-MVC frameworks, templating engines, CSS frameworks etc'">A Mobile Web App Stack (Feb 2012)</a>
-                </li>
+							<li>
+								<a href="http://jpr12ns.appspot.com/" target="_blank" class="tips"
+								title="Four talks I gave at Java Posse 2012 - Pssst... there is one on my failed startup story, which you might like."> <b>My JPR12 Talks: A Failed Startup Story, Chrome DevTools and WebApps</b> (March
+								2012)</a>
+							</li>
 
-                <li>
-                  <a href="http://ido-green.appspot.com/HTML5_Training_day_ChromeOS_Jan_2012.pdf" target="_blank" 
-              class="tips" title="A short (PDF) presentation on the current state of ChromeOS and why it's such a good solution for business">The State of ChromeOS (Jan 2012)</a>
-                </li>
+							<li>
+								<a
+								href="http://ido-green.appspot.com/html5-training-day/great-web-app/index.html"
+								target="_blank" class="tips"
+								title="Web developers have nearly perfected their skill at building great web sites, but everything is shifting towards building apps.  We'll take a look at what defines a great Web App and show you how you can use HTML5 to create a new breed of web application that will delight and amaze your users."> A new breed of web apps (March 2012)</a>
+							</li>
 
-                <li>
-                  <a href="http://goo.gl/Rt3LM" target="_blank" class="tips" title="A short presentation on ChromeOS for business and some HTML5. You can also see some content on Chrome web store and why it's great for developers">Chrome & HTML5 - CloudCon (Nov 2011)</a>
-                </li>
-                <li>
-                  <a href="http://ido-green.appspot.com/Chrome_HTML5_for_GTUG_TLV_2011_10_25_.pdf" target="_blank"
-                   class="tips" title="A talk I gave to GTUG Tel Aviv - mostly to web developers and how to can be more productive with HTML5 and its current features">Chrome & HTML5 (PDF, Oct 2011)</a>
-                </li>
-                <li>
-                  <a href="http://ido-green.appspot.com/html5-ChromeOS-9-5-2011/HTML5-CromeOS.html" target="_blank"
-                   class="tips" title="A talk focus on HTML5 and some ChromeOS that I gave in London in HTML5Live conf. Aim to developers/CTOs and others that wish to leverage ChromeOS/HTML5 new APIs">HTML5 & ChromeOS (Sep 2011)</a>
-                </li>
-                <li>
-                  <a href="http://ido-green.appspot.com/html5-8-8-2011/HTML5-8-8-2011.html" target="_blank"
-                   class="tips" title="The State of HTML5 and what features are good/risky and on the edge">HTML5 Today (Aug 2011)</a>
-                </li>
-                <li>
-                  <a href="http://ido-green.appspot.com/html5-8-8-2011/Chrome_Presentation_for_TheJunction_co_il_Star.pdf" 
-                   target="_blank" class="tips" title="A talk I gave in the Junction (startup incubator) - main focus is on ChromeOS and Chrome web store - why/when/how developers should deal with it.">ChromeOS/Chromebook & CWS (PDF, Aug 2011)</a>
-                </li>
-                <li>
-                  <a href="http://ido-green.appspot.com/meetup-webStore-fileAPI-5-31-2011.html" target="_blank"                   
-                   class="tips" title="Chrome web store and the new file api that developers got on the chromeOS/Chromebook">CWS + File API (May 2011)</a>
-                </li>
+							<li>
+								<a
+								href="http://ido-green.appspot.com/html5-training-day/mobile-web-app/index.html"
+								target="_blank" class="tips"
+								title="A presentation on Mobile Web Apps Stack - from HTML5 Training Day 2012 TLV. Learn what it takes to build modern mobile web apps. We will start with the ideas of "
+								adaptive apps" and "offline first". Next, we'll dive into some of the
+								technologies, including MVC frameworks, templating engines, CSS frameworks, laying out
+								views and multi-touch input. Finally, we'll close off withmobile-specifictipsandsweetdemos"> Mobile web app HTML5 stack (March 2012)</a>
+							</li>
+							<li>
+								<a href="http://ido-green.appspot.com/ChromeOS_HTML5_March_2012.pdf"
+								target="_blank" class="tips"
+								title="A (PDF) presentation on the current state of Chrome, Chrome Web Store and ChromeOS">The
+								State of ChromeOS (March 2012)</a>
+							</li>
 
-                <li>
-                  <a href="http://html5-demos.appspot.com" target="_blank">Html5 Demo Presentation (long but good)</a>
-                </li>
+							<li>
+								<a
+								href="http://ido-green.appspot.com/html5-training-day/mobile-web-app/index.html"
+								target="_blank" class="tips"
+								title="A talk I gave in DevCon TLV 2012 - It's include: what it takes to build modern mobile web apps. from ideas of adaptive apps and offline first to some of the technologies: JS-MVC frameworks, templating engines, CSS frameworks etc'">A
+								Mobile Web App Stack (Feb 2012)</a>
+							</li>
 
-                <li>
-                  <a href="http://client-side-storage.appspot.com/" target="_blank" class="tips" title="From Feb 2012 - by Pamela Fox">Html5 Offline in the real world</a>
-                </li>
+							<li>
+								<a href="http://ido-green.appspot.com/HTML5_Training_day_ChromeOS_Jan_2012.pdf"
+								target="_blank" class="tips"
+								title="A short (PDF) presentation on the current state of ChromeOS and why it's such a good solution for business">The
+								State of ChromeOS (Jan 2012)</a>
+							</li>
 
-                <li>
-                  <a href="http://io2011-zerotohero.appspot.com/index.html" target="_blank">Mobile Web Dev (HTML5 on mobile)</a>
-                </li>
-                <li>
-                  <a href="http://www.htmlfivewow.com" target="_blank">Html5Now (Google I/O 2011)</a>
-                </li>
-                <li>
-                  <a href="http://code.google.com/p/html5wow/"target="_blank">Html5Now Code</a>
-                </li>
-                <li>
-                  <a href="http://www.belshe.com/test/amazon2010/#slide1.0" target="_blank">Chrome Story And HTML5 (Sep 2010)</a>
-                </li>
-                <li>
-                  <a href="http://goo.gl/5apXm" target="_blank">What is new in HTML5 (7/7/2011)</a>
-                </li>
-                <li>
-                  <a href="http://smustalks.appspot.com/sxsw-11/#slide1" target="_blank">HTML5 and You (Boris&Paul SXSW-11)</a>
-                </li>
-                <li>
-                  <a href="http://fronteers-cws.appspot.com/WebStore/index.html" target="_blank">Chrome OS and Chrome Web Store (11/7/2011)</a>
-                </li>
-              </ul>
-              
-              <span id="less-pre-but">
-                <a class="btn primary">Less slides &laquo;</a>
-              </span>
-              
-            </div>
-            
-            <div class="span4" id="codehacking">
-              <h2>Code And Hacking</h2>
-              <p>
-                Some demo
-                <img src="imgs/studio.png" width="70" height="70" alt="studio" align="left"/>
-                projects and real-live web apps. In between, chrome extensions and other HTML5 'prof of concept'
-            For more checkout
-                <a href="https://github.com/greenido" _target="blank">my github page</a>
-              </p>
-              <h3>Demos</h3>
-              <li>
-                <a href="http://ido-green.appspot.com/alertsil/index.html" target="_blank"
-                 class="tips" title="Mobile web app that will be used in times that you want to get alerts asap in Israel. It use JSONP and other client side tech to work as pure client side app. It's only in alpha version - so lots of other improvements will come in the future.">Alerts-IL a Mobile Web App Example (alpha - Nov 2012)</a>
-              </li>
-              
-              <li><a href="http://greenido.wordpress.com/2012/10/05/how-to-use-indexeddb-simplest-example/" target="_blank"
-                 class="tips" title="Simple example on a todo app. Works great both on FF and Chrome and even Safari with a JS shim">
-                 Simple(st) example to use indexedDB (Sep 2012)</a> and the 
-                <a href="http://ido-green.appspot.com/WebSQL-IndexedDB-example/jqm_indexedDB.html">Live Demo</a>
-                </li>
-                
-              <li>
-                <a href="http://ido-green.appspot.com/WebSQL-IndexedDB-example/main.html" target="_blank"
-                 class="tips" title="One page that let you see the code that handle both DBs in the same ToDo list example">WebSQL to IndexedDB Example (Dec 2011)</a>
-              </li>
-              <li>
-                <a href="http://www.html5rocks.com/en/tutorials/webdatabase/websql-indexeddb/" rel="nofollow" 
-                    class="tips" title="A Tutorial on HTML5Rock.com"  target="_blank">Migrating your WebSQL DB to IndexedDB on html5rock.com</a>
-              </li>
-              <li>
-                <a href="indexDB-demo3.html" target="_blank">How To Use IndexDB - Code And Example</a>
-              </li>
-              <li>
-                <a href="http://html5-demos.appspot.com/static/googlela/demos.html" target="_blank">Html5 Demos</a>
-              </li>
-              <h3>Web Workers</h3>
+							<li>
+								<a href="http://goo.gl/Rt3LM" target="_blank" class="tips"
+								title="A short presentation on ChromeOS for business and some HTML5. You can also see some content on Chrome web store and why it's great for developers">Chrome
+								& HTML5 - CloudCon (Nov 2011)</a>
+							</li>
+							<li>
+								<a
+								href="http://ido-green.appspot.com/Chrome_HTML5_for_GTUG_TLV_2011_10_25_.pdf"
+								target="_blank" class="tips"
+								title="A talk I gave to GTUG Tel Aviv - mostly to web developers and how to can be more productive with HTML5 and its current features">Chrome
+								& HTML5 (PDF, Oct 2011)</a>
+							</li>
+							<li>
+								<a
+								href="http://ido-green.appspot.com/html5-ChromeOS-9-5-2011/HTML5-CromeOS.html"
+								target="_blank" class="tips"
+								title="A talk focus on HTML5 and some ChromeOS that I gave in London in HTML5Live conf. Aim to developers/CTOs and others that wish to leverage ChromeOS/HTML5 new APIs">HTML5
+								& ChromeOS (Sep 2011)</a>
+							</li>
+							<li>
+								<a href="http://ido-green.appspot.com/html5-8-8-2011/HTML5-8-8-2011.html"
+								target="_blank" class="tips"
+								title="The State of HTML5 and what features are good/risky and on the edge">HTML5
+								Today (Aug 2011)</a>
+							</li>
+							<li>
+								<a
+								href="http://ido-green.appspot.com/html5-8-8-2011/Chrome_Presentation_for_TheJunction_co_il_Star.pdf"
+								target="_blank" class="tips"
+								title="A talk I gave in the Junction (startup incubator) - main focus is on ChromeOS and Chrome web store - why/when/how developers should deal with it.">ChromeOS/Chromebook
+								& CWS (PDF, Aug 2011)</a>
+							</li>
+							<li>
+								<a href="http://ido-green.appspot.com/meetup-webStore-fileAPI-5-31-2011.html"
+								target="_blank" class="tips"
+								title="Chrome web store and the new file api that developers got on the chromeOS/Chromebook">CWS
+								+ File API (May 2011)</a>
+							</li>
 
-              <li>
-                <a href="http://greenido.github.com/Web-Workers-Examples-/" target="_blank"
-                  class="tips" title="A full set of examples I've wrote to my Web Workers book. Feel free to fork/download the code">Web Workers on Github (March 2012)</a>
-              </li>
-              <li>
-                <a href="examples/webWorkers/Example-pi.html" target="_blank" title="Run after PI while the browser paint a nice spinner on canvas">Web Workers Pi for 14-3-2012</a>
-              </li>
-              <li>
-                <a href="examples/webWorkers/highPrime2.html" target="_blank">Web Workers Prime (Nov 2011)</a>
-              </li>
+							<li>
+								<a href="http://html5-demos.appspot.com" target="_blank">Html5 Demo
+								Presentation (long but good)</a>
+							</li>
 
-              <h3>ChromeOS/Web/Mobile Apps</h3>
-              <li>
-                <a href="http://best-apps4.me/dropLoader/" target="_blank" title="Will let you upload files from the chromebook file manager and you can work like a pro with your Dropbox account">Dropbox For Chromebook</a>
-              </li>
-              <li>
-                <a href="https://chrome.google.com/webstore/detail/eopaaagmlfdhgddapheajjadlplffjpk?hl=en-US" target="_blank">Win Your "Words With Friends"</a>
-              </li>
-              <li>
-                <a href="http://best-apps4.me/flickr-down/" target="_blank">Download Flickr's Sets</a>
-              </li>
+							<li>
+								<a href="http://client-side-storage.appspot.com/" target="_blank" class="tips"
+								title="From Feb 2012 - by Pamela Fox">Html5 Offline in the real world (Feb 2012)</a>
+							</li>
 
-              <h3>Chrome Extentions</h3>
-              <li>
-                <a href="https://chrome.google.com/webstore/detail/iblhmendleblcobcmphbhljgkfgnjoch?hl=en-US" target="_blank" title="For developers who like to develop in chrome">Chrome shortCuts</a>
-              </li>
-              <li>
-                <a href="https://chrome.google.com/webstore/detail/ommkaljfibjappkbppannkhokobjdfef?hl=en-US" target="_blank">Car Shopping Tool</a>
-              </li>
-              <li>
-                <a href="https://chrome.google.com/webstore/detail/jebceaofjplnbjcfmanddjpfddegokgo?hl=en-US">Car News</a>
-              </li>
+							
+							<li>
+								<a href="http://www.htmlfivewow.com" target="_blank">Html5Now (Google I/O
+								2011)</a>
+							</li>
+						
+							<li>
+								<a href="http://www.belshe.com/test/amazon2010/#slide1.0" target="_blank">Chrome
+								Story And HTML5 (Sep 2010)</a>
+							</li>
+							
+							<li>
+								<a href="http://smustalks.appspot.com/sxsw-11/#slide1" target="_blank">HTML5
+								and You (Boris&Paul SXSW-11)</a>
+							</li>
+							<li>
+								<a href="http://fronteers-cws.appspot.com/WebStore/index.html" target="_blank">Chrome
+								OS and Chrome Web Store (11/7/2011)</a>
+							</li>
+					</ul>
 
-              <h3>Web Apps</h3>
-              <li>
-                <a href="http://www.chromeexperiments.com/" target="_blank">Chrome Experiments</a>
-              </li>
-              <li>
-                <a href="http://best-apps4.me/todo/index.html" target="_blank">A To-Do List Example</a>
-              </li>
-              <li>
-                <a href="https://demos.mozilla.org/en-US/" target="_blank">Mozilla Demos</a>
-              </li>
-              <li>
-                <a href="http://everytimezone.com/" target="_blank">Every Time Zone</a>
-              </li>
+					<span id="less-pre-but"> <a class="btn primary">Less slides &laquo;</a> </span>
 
-            </div>
-            <div class="span4" id="news">
-              <h2>News</h2>
+				</div>
 
-              <p>
-                My new book - <b>Web Workers</b> (June 2012)
-                <br/>
+				<div class="span4" id="codehacking">
+					<h2>Code And Hacking</h2>
+					<p>
+						Some demo <img src="imgs/studio.png" width="70" height="70" alt="studio" align="left" />
+						projects and real-live web apps. In between, chrome extensions and other HTML5 'prof of
+						concept' For more checkout <a href="https://github.com/greenido" _target="blank">my
+						github page</a>
+					</p>
 
-                <a href="http://www.amazon.com/gp/product/1449322131/ref=as_li_ss_il?ie=UTF8&tag=mybuwa-20&linkCode=as2&camp=1789&creative=390957&creativeASIN=1449322131">Multithreaded Programs in JavaScript.</a>
-                <a href="http://www.amazon.com/gp/product/1449322131/ref=as_li_ss_il?ie=UTF8&tag=mybuwa-20&linkCode=as2&camp=1789&creative=390957&creativeASIN=1449322131">
-                  <img style="margin-left: 50px; padding: 10px;" border="0" 
-                src="http://greenido.files.wordpress.com/2012/06/screen-shot-2012-06-01-at-9-51-36-am.png?w=120" alt="Web Workers: Multithreaded Programs in JavaScript. Make your web app run faster." />
-                </a>
+					<div class="accordion" id="accordion2">
+						<div class="accordion-group">
+							<div class="accordion-heading">
+								<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2"
+								href="#collapseOne"> <h4><i class="icon-globe"></i> Mobile Web Apps </h4> </a>
+							</div>
+							<div id="collapseOne" class="accordion-body  ">
+								<div class="accordion-inner">
+									<li>
+									   <a href="http://ido-green.appspot.com/html5timetracker/index.html" target="_blank"
+									   class="tips" title="Time Tracker in Hebrew that show the power of simple/useful web app"> 
+									 Time Tracker In Hebrew (July 2014)</a>
+									</li>
+									
+									<div style="padding-bottom: 1em">
+										<a href="http://ido-green.appspot.com/abach-map/index.html" target="_blank"
+										class="tips thumbnail"
+										title="Mobile web app to find NBC stations in Israel"> 
+										<img src="http://ido-green.appspot.com/abach-map/img/speedy.png" alt="Abach finder logo" />
+										<br>
+										Abach Finder IL (Beta - Sep 2013)
+										 </a>
+									</div>
+									
+									<li>
+									   <a href="http://ido-green.appspot.com/t-surf-ex.html" target="_blank"
+									   class="tips" title="Single web app for coder - Used as an example"> 
+									 Coder Example Conf. Page (Sep 2013)</a>
+									</li>
+									
+									<li>
+									   <a href="http://ido-green.appspot.com/ritza-il.html" target="_blank"
+									   class="tips" title="A better mobile version of all the sports events in Israel"> 
+									 Sports Events in Israel (beta - Sep 2013)</a>
+									</li>
+									
+									
+									<li>
+									   <a href="http://ido-green.appspot.com/abach-map/jqm-index.html" target="_blank"
+									   class="tips" title="Mobile web app to find NBC stations in Israel. Built on top of jQuery mobile"> 
+									  JQM - Abach Finder IL (Beta - Sep 2013)</a>
+									</li>
+									
+									<li>
+									   <a href="http://ido-green.appspot.com/alertsil/index.html" target="_blank"
+									   class="tips" title="Mobile web app that will be used in times that you want to get alerts asap in Israel. It use JSONP and other client side tech to work as pure client side app. It's only in alpha version - so lots of other improvements will come in the future."> 
+									 Alerts-IL a Mobile Web App (alpha - Nov 2012)</a>
+									</li>
+									
+									<li>
+									   <a href="getUserMedia-hello-world.html" target="_blank"
+									   class="tips"
+									   title="WebRTC simple example of getUserMedia API">
+									    <i class="icon-camera"></i> WebRTC Hello World Example</a>
+									</li>
+									<li>
+										<a
+										href="https://chrome.google.com/webstore/detail/eopaaagmlfdhgddapheajjadlplffjpk?hl=en-US"
+										target="_blank" class="tips" title="little mobile web app to help you find good words for your game">
+										<i class="icon-bullhorn"></i> Win Your "Words With Friends"</a>
+									</li>
+								</div>
+							</div>
+						</div>
+						<div class="accordion-group">
+							<div class="accordion-heading">
+								<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2"
+								href="#collapseTwo"> <h4><i class="icon-search"></i> IndexedDB Examples </h4> </a>
+							</div>
+							<div id="collapseTwo" class="accordion-body collapse">
+								<div class="accordion-inner">
+									<li>
+										<a
+										href="http://greenido.wordpress.com/2012/10/05/how-to-use-indexeddb-simplest-example/"
+										target="_blank" class="tips"
+										title="Simple example on a todo app. Works great both on FF and Chrome and even Safari with a JS shim"> Simple(st) example to use indexedDB (Sep 2012)</a> and the <a
+										href="http://ido-green.appspot.com/WebSQL-IndexedDB-example/jqm_indexedDB.html">Live
+										Demo</a>
+									</li>
 
-              </p>
-              <p>
-                <img src="imgs/presentation.png" width="65" height="65" alt="studio" align="left"/>
-                Some post I'm writing on my blog, html5rock and other places around the web. I'll also fetch here all the updates on Chrome, ChromeOS and HTML5 that I'm finding around the block.
-              </p>
+									<li>
+										<a href="http://ido-green.appspot.com/WebSQL-IndexedDB-example/main.html"
+										target="_blank" class="tips"
+										title="One page that let you see the code that handle both DBs in the same ToDo list example">WebSQL
+										to IndexedDB Example (Dec 2011)</a>
+									</li>
+									<li>
+										<a
+										href="http://www.html5rocks.com/en/tutorials/webdatabase/websql-indexeddb/"
+										rel="nofollow" class="tips" title="A Tutorial on HTML5Rock.com" target="_blank">Migrating
+										your WebSQL DB to IndexedDB on html5rock.com</a>
+									</li>
+									<li>
+										<a href="indexDB-demo3.html" target="_blank">How To Use IndexDB - Code
+										And Example</a>
+									</li>
+									<li>
+										<a href="http://html5-demos.appspot.com/static/googlela/demos.html"
+										target="_blank">Html5 Demos</a>
+									</li>
+								</div>
+							</div>
+						</div>
 
-              <div id="myblog"></div>
-              <p>
-                <div id="myblog-but">
-                  <a class="btn">More Chrome News &raquo;</a>
-                </div>
-              </p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="span16">
-              <div id="chromenews"></div>
-            </div>
-          </div>
+						<div class="accordion-group">
+							<div class="accordion-heading">
+								<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2"
+								href="#collapse3"> <h4><i class="icon-th-list"></i> Web Workers </h4> </a>
+							</div>
+							<div id="collapse3" class="accordion-body collapse ">
+								<div class="accordion-inner">
+									<li>
+										<a href="http://greenido.github.com/Web-Workers-Examples-/" target="_blank"
+										class="tips"
+										title="A full set of examples I've wrote to my Web Workers book. Feel free to fork/download the code">Web
+										Workers on Github (March 2012)</a>
+									</li>
+									<li>
+										<a href="examples/webWorkers/Example-pi.html" target="_blank"
+										title="Run after PI while the browser paint a nice spinner on canvas">Web
+										Workers Pi for 14-3-2012</a>
+									</li>
+									<li>
+										<a href="examples/webWorkers/highPrime2.html" target="_blank">Web
+										Workers Prime (Nov 2011)</a>
+									</li>
 
-          <div class="row bottom-boxes">
-            <div class="span4 coolFontBig">
-              As Oscar Wild put it:
-              <br/>
-              "Punctuality is the thief of time."
-              <br/>
-              <br/>
+									<h5>ChromeOS</h5>
+									<li>
+										<a href="http://best-apps4.me/dropLoader/" target="_blank"
+										title="Will let you upload files from the chromebook file manager and you can work like a pro with your Dropbox account">Dropbox
+										For Chromebook</a>
+									</li>
+									<li>
+										<a href="http://best-apps4.me/flickr-down/" target="_blank">Download
+										Flickr's Sets</a>
+									</li>
+								</div>
+							</div>
+						</div>
 
-              <div style='padding-bottom: 2px; line-height: 0px'>
-                <a href='http://pinterest.com/pin/31736372344914650/' target='_blank'>
-                  <img src='http://media-cache-ec0.pinterest.com/upload/130111876705076602_GYErx2LA_c.jpg' border='0' width='320' height ='240'/></a></div><div style='float: left; padding-top: 0px; padding-bottom: 0px;'><p style='font-size: 10px; color: #76838b;'>Source: <a style='text-decoration: underline; font-size: 10px; color: #76838b;' href='http://pin4fun8906.blogspot.com/'>pin4fun8906.blogspot.com</a> via <a style='text-decoration: underline; font-size: 10px; color: #76838b;' href='http://pinterest.com/greenido/' target='_blank'>Ido</a> on <a style='text-decoration: underline; color: #76838b;' href='http://pinterest.com' target='  _blank'>Pinterest</a>
-                </p>
-              </div>
-              
-              <div class="heart">&#x2665;</div>
+						<div class="accordion-group">
+							<div class="accordion-heading">
+								<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2"
+								href="#collapse4"> <h4><i class="icon-eye-open"></i> Chrome Extentions/Apps </h4> </a>
+							</div>
+							<div id="collapse4" class="accordion-body collapse ">
+								<div class="accordion-inner">
+									<li>
+										<a
+										href="https://chrome.google.com/webstore/detail/iblhmendleblcobcmphbhljgkfgnjoch?hl=en-US"
+										target="_blank" title="For developers who like to develop in chrome">Chrome
+										shortCuts</a>
+									</li>
+									<li>
+										<a
+										href="https://chrome.google.com/webstore/detail/ommkaljfibjappkbppannkhokobjdfef?hl=en-US"
+										target="_blank">Car Shopping Tool</a>
+									</li>
+									<li>
+										<a
+										href="https://chrome.google.com/webstore/detail/jebceaofjplnbjcfmanddjpfddegokgo?hl=en-US">Car
+										News</a>
+									</li>
 
-            </div>
-            <div class="span5" id="clock">
-              <iframe src="clock.html" border="0" width="390px" height="390px" SCROLLING='no' FRAMEBORDER=0 >
-                <h4>"It takes time to save time"</h4>
-              </iframe>
-            </div>
-            
-            <div class="span3" id="gdlil">
-                <span class="coolFontBig">GDL-IL Weekly Shows</span>
-                <a href="gdl-il-list.html">
-                    <img src="http://greenido.files.wordpress.com/2012/10/screen-shot-2012-10-10-at-2-38-15-pm.png?w=584" alt="GDL IL shows"/>
-                </a>
-                <p>
-                    Google Developers Live Israel - HTML5, Android and Startups
-                </p>
-            </div>
-            
-          </div>
+									<h5>Web Apps Experiments</h5>
+									<li>
+										<a href="http://www.chromeexperiments.com/" target="_blank">Chrome
+										Experiments</a>
+									</li>
+									<li>
+										<a href="http://best-apps4.me/todo/index.html" target="_blank">A To-Do
+										List Example</a>
+									</li>
+									<li>
+										<a href="https://demos.mozilla.org/en-US/" target="_blank">Mozilla
+										Demos</a>
+									</li>
+									<li>
+										<a href="http://everytimezone.com/" target="_blank">Every Time Zone</a>
+									</li>
+								</div>
+							</div>
+						</div>
 
-          <footer>
-            <div class="row">
-              <div class="span2 tips coolFontBig" title="It's all yours under Creative Commons - Have fun and please let me know when/where you use it so I'll be proud of you">Ido Green 2011</div>
-              <div class="span1 wooop tips" title="My twitter user @greenido">
-                <a href="https://twitter.com/#!/greenido" target="_blank" >
-                  <img src="imgs/twitter64x64.png" width="64px" height="64px"/>
-                </a>
-              </div>
-              <div class="span1 wooop tips" title="Little jump in Colorado">
-                <a href="http://about.me/greenido" target="_blank" >
-                  <img src="imgs/in64x64.png" width="64px" height="64px"/>
-                </a>
-              </div>
-              <div class="span1 wooop tips" title="My G+ spot in the world">
-                <a href="http://plus.ly/greenido" target="_blank" >
-                  <img src="imgs/g+64x64.png" width="64px" height="64px"></a>
-              </div>
-              <div class="span1 wooop tips" title="My blog">
-                <a href="http://greenido.wordpress.com" target="_blank">
-                  <img src="imgs/wordpress64x64.png" width="64px" height="64px"></a>
-              </div>
-              <div class="span3 tips" title="HTML5 Powered with Connectivity / Realtime, CSS3 / Styling, Device Access, Graphics, 3D &amp; Effects, Multimedia, Performance &amp; Integration, Semantics, and Offline &amp; Storage (2012 Feb 15) ">
-                <a href="http://www.w3.org/html/logo/" target="_blank" class='w3-logo' >
-                  <img src="http://www.w3.org/html/logo/badge/html5-badge-h-connectivity-css3-device-graphics-multimedia-performance-semantics-storage.png" 
-                   width="357" height="64" alt="HTML5 Powered with Connectivity / Realtime, CSS3 / Styling, Device Access, Graphics, 3D &amp; Effects, Multimedia, Performance &amp; Integration, Semantics, and Offline &amp; Storage" ></a>
-              </div>
-            </div>
-          </footer>
+					</div>
+					<!--  end of collapsing -->
 
-        </div>
-        <!-- /container -->
+				</div>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.2.min.js"><\/script>')</script>
+				<div class="span4" id="news">
+					<img src="imgs/presentation.png" width="65" height="65" alt="studio" align="left" />
+					<h2>Projects</h2>
+					<p>
+						My new book - <b>Web Workers</b> (June 2012)
+						<br />
+						<a
+						href="http://www.amazon.com/gp/product/1449322131/ref=as_li_ss_il?ie=UTF8&tag=mybuwa-20&linkCode=as2&camp=1789&creative=390957&creativeASIN=1449322131">Multithreaded
+						Programs in JavaScript.</a><a
+						href="http://www.amazon.com/gp/product/1449322131/ref=as_li_ss_il?ie=UTF8&tag=mybuwa-20&linkCode=as2&camp=1789&creative=390957&creativeASIN=1449322131"> <img style="margin-left: 50px; padding: 10px;" border="0"
+						src="http://greenido.files.wordpress.com/2012/06/screen-shot-2012-06-01-at-9-51-36-am.png?w=120"
+						alt="Web Workers: Multithreaded Programs in JavaScript. Make your web app run faster." /> </a>
+					</p>
 
-      <script src="js/libs/bootstrap/bootstrap.min.js"></script>
+					<p>
+						<a href="http://greenido.wordpress.com/2011/07/04/web-developers-and-the-new-chromebook/">
+							Web Developers And The Chromebook
+							<img src="http://greenido.files.wordpress.com/2011/07/screen-shot-2011-07-04-at-2-21-23-pm.png?w=125&h=150"
+							style="margin-left: 50px; padding: 10px; border-radius:25px;" border="0"
+						alt="develop on chrome book picture"/> </a>
+					</p>
+				</div>
+			</div>
 
-      <!-- scripts concatenated and minified via ant build script-->
-      <script src="js/libs/jquery.zrssfeed.min.js"></script>
-      <script src="js/libs/jquery.tipTip.minified.js"></script>
-      <script src="js/plugins.js"></script>
-      <script src="js/script.js"></script>
+			<div class="row" style="padding-bottom: 2em; padding-top: 1em;">
+				<div class="span8" id="myblog"></div>
+				<div class="span4">
+					<div id="chromenews"></div>
+					<div id="myblog-but">
+						<a class="btn"><i class="icon-repeat"></i> (A lot) More Chrome News &raquo;</a>
+					</div>
+				</div>
+			</div>
 
-      <script src="http://apis.google.com/js/plusone.js"></script>
+			<div class="row bottom-boxes">
+				<div class="span4 coolFontBig">
+					As Oscar Wild put it:
+					<br />
+					"Punctuality is the thief of time."
+					<br />
+					<br />
 
-      <script>
-      var _gaq=[['_setAccount','UA-27750723-1'],['_trackPageview']];
-      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-      s.parentNode.insertBefore(g,s)}(document,'script'));
-       </script>
+					<div style='padding-bottom: 2px; line-height: 0px'>
+						<a href='http://about.me/greenido' target='_blank'> <img
+						src='imgs/someone-busy-is-running.png'
+						border='0' width='320' height='240' /> </a>
+					
+						<div class="heart">
+							&#x2665;
+						</div>
 
-      </body>
-    </html>
+					</div>
+					
+					
+				</div>
+				<div class="span5" id="clock">
+					<iframe src="clock.html" border="0" width="390px" height="390px" SCROLLING='no'
+					FRAMEBORDER=0>
+						<h4>"It takes time to save time"</h4>
+					</iframe>
+				</div>
+
+				<div class="span3" id="gdlil">
+					<span class="coolFontBig">GDL-IL Weekly Shows</span><a href="gdl-il-list.html"> <img
+					src="http://greenido.files.wordpress.com/2012/10/screen-shot-2012-10-10-at-2-38-15-pm.png?w=584"
+					alt="GDL IL shows" /> </a>
+					<p>
+						Google Developers Live Israel - HTML5, Android and Startups
+					</p>
+				</div>
+
+			</div>
+
+			<footer>
+				<hr>
+				<div class="row">
+					<div class="span2 tips coolFontBig"
+					title="It's all yours under Creative Commons - Have fun and please let me know when/where you use it so I'll be proud of you">
+						Ido Green 2014
+					</div>
+					<div class="span1 wooop tips" title="My twitter user @greenido">
+						<a href="https://twitter.com/#!/greenido" target="_blank"> <img
+						src="imgs/twitter64x64.png" width="64px" height="64px" /> </a>
+					</div>
+					<div class="span1 wooop tips" title="Little jump in Colorado">
+						<a href="http://about.me/greenido" target="_blank"> <img src="imgs/in64x64.png"
+						width="64px" height="64px" /> </a>
+					</div>
+					<div class="span1 wooop tips" title="My G+ spot in the world">
+						<a href="http://plus.ly/greenido" target="_blank"> <img src="imgs/g+64x64.png"
+						width="64px" height="64px"> </a>
+					</div>
+					<div class="span1 wooop tips" title="My blog">
+						<a href="http://greenido.wordpress.com" target="_blank"> <img
+						src="imgs/wordpress64x64.png" width="64px" height="64px"> </a>
+					</div>
+					<div class="span3 tips"
+					title="HTML5 Powered with Connectivity / Realtime, CSS3 / Styling, Device Access, Graphics, 3D &amp; Effects, Multimedia, Performance &amp; Integration, Semantics, and Offline &amp; Storage (2012 Feb 15) ">
+						<a href="http://www.w3.org/html/logo/" target="_blank" class='w3-logo'> <img
+						src="http://www.w3.org/html/logo/badge/html5-badge-h-connectivity-css3-device-graphics-multimedia-performance-semantics-storage.png"
+						width="357" height="64"
+						alt="HTML5 Powered with Connectivity / Realtime, CSS3 / Styling, Device Access, Graphics, 3D &amp; Effects, Multimedia, Performance &amp; Integration, Semantics, and Offline &amp; Storage"> </a>
+					</div>
+				</div>
+			</footer>
+
+		</div>
+		<!-- /container -->
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script>
+			window.jQuery || document.write('<script src="js/libs/jquery-1.7.2.min.js"><\/script>')
+		</script>
+
+		<script src="js/libs/bootstrap/bootstrap.min.js"></script>
+
+		<!-- scripts concatenated and minified via ant build script-->
+		<script src="js/libs/jquery.zrssfeed.min.js"></script>
+		<script src="js/libs/jquery.tipTip.minified.js"></script>
+		<script src="js/plugins.js"></script>
+		<script src="js/script.js"></script>
+
+		<script src="http://apis.google.com/js/plusone.js"></script>
+
+		<script>
+			var _gaq = [['_setAccount', 'UA-27750723-1'], ['_trackPageview']]; ( function(d, t) {
+					var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
+					g.src = ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js';
+					s.parentNode.insertBefore(g, s)
+				}(document, 'script'));
+		</script>
+
+	</body>
+</html>
