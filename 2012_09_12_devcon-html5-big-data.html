@@ -1,0 +1,203 @@
+<!doctype html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en">
+  <![endif]-->
+  <!--[if IE 7]>
+  <html class="no-js lt-ie9 lt-ie8" lang="en">
+    <![endif]-->
+    <!--[if IE 8]>
+    <html class="no-js lt-ie9" lang="en">
+      <![endif]-->
+      <!--[if gt IE 8]>
+      <!-->
+      <html class="no-js" lang="en">
+        <!--<![endif]-->
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+        <title>Big Data And HTML5</title>
+        <meta name="description" content="Big Data And HTML5 - Ido Green talk in DevCon 2012 Tel Aviv">
+        <meta name="author" content="Ido Green | greenido.wordpress.com | @greenido">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/bootstrap-responsive.min.css">
+        <link rel="stylesheet" href="../css/rssfeed.css">
+
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/tipTip.css">
+
+        <link rel="shortcut icon" href="../imgs/favicon.ico">
+        <link rel="apple-touch-icon" href="../imgs/apple-touch-57x57.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="../imgs/apple-touch-72x72.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="../imgs/apple-touch-114x114.png">
+
+        <script src="../js/libs/modernizr-2.5.3-respond-1.1.0.min.js"></script>
+        <style type="text/css">
+    img:not([width]):not([height]) {
+      border: 2px solid red !important;
+    }
+
+    ol{margin:0;padding:0}.c11{color:#999988;font-size:9pt;font-style:italic;font-family:"Consolas"}.c0{font-size:9pt;background-color:#ffffff;font-family:"Consolas"}.c45{color:#3b81f1;font-size:15pt;font-family:"Open Sans"}.c42{list-style-type:circle;margin:0;padding:0}.c30{padding-left:0pt;text-align:justify;margin-left:46pt}.c9{padding-left:0pt;text-align:justify;margin-left:72pt}.c15{color:#333333;font-size:9pt;font-family:"Consolas"}.c25{font-size:10pt;background-color:#fafafa;font-family:"Verdana"}.c32{list-style-type:decimal;margin:0;padding:0}.c22{list-style-type:disc;margin:0;padding:0}.c46{max-width:468pt;padding:72pt 72pt 72pt 72pt}.c26{color:#008000;font-style:italic}.c18{color:#333333;background-color:#ffffff}.c12{padding-left:0pt;margin-left:37pt}.c14{padding-left:0pt;margin-left:36pt}.c43{color:#042550;font-size:10pt}.c19{color:#373737;background-color:#ffffff}.c48{padding-left:0pt;margin-left:92pt}.c5{font-size:10pt;font-family:"Courier New"}.c20{color:#1155cc;text-decoration:underline}.c13{color:inherit;text-decoration:inherit}.c23{font-size:9pt;font-family:"Consolas"}.c7{padding-left:0pt;margin-left:13pt}.c35{color:#042550;background-color:#f5f5f5}.c4{font-weight:bold}.c3{direction:ltr}.c51{color:#009999}.c10{color:#0000ff}.c27{background-color:#ffffff}.c1{color:#009900}.c47{color:#008800}.c17{color:#006633}.c28{font-style:italic}.c44{text-align:justify}.c49{background-color:#ff9900}.c24{color:#006699}.c37{color:#dd1144}.c6{height:11pt}.c40{color:#6611cc}.c29{font-size:14pt}.c41{color:#000088}.c33{color:#0088cc}.c21{color:#000066}.c31{color:#1982d1}.c39{color:#666666}.c36{color:#880000}.c16{color:#003399}.c50{color:#042550}.c8{font-family:"Courier New"}.c38{color:#cc66cc}.c34{text-align:center}.c2{color:#339933}.title{padding-top:24pt;line-height:1.15;text-align:left;color:#000000;font-size:36pt;font-family:"Arial";font-weight:bold;padding-bottom:6pt}.subtitle{padding-top:18pt;line-height:1.15;text-align:left;color:#666666;font-style:italic;font-size:24pt;font-family:"Georgia";padding-bottom:4pt}li{color:#000000;font-size:11pt;font-family:"Arial"}p{color:#000000;font-size:11pt;margin:0;font-family:"Arial"}h1{padding-top:35pt;line-height:1.15;text-align:left;color:#000000;font-size:18pt;font-family:"Arial";font-weight:bold;padding-bottom:6pt}h2{padding-top:18pt;line-height:1.15;text-align:left;color:#000000;font-size:14pt;font-family:"Arial";font-weight:bold;padding-bottom:4pt}h3{padding-top:14pt;line-height:1.15;text-align:left;color:#666666;font-size:12pt;font-family:"Arial";font-weight:bold;padding-bottom:4pt}h4{padding-top:12pt;line-height:1.15;text-align:left;color:#666666;font-style:italic;font-size:11pt;font-family:"Arial";padding-bottom:2pt}h5{padding-top:11pt;line-height:1.15;text-align:left;color:#666666;font-size:10pt;font-family:"Arial";font-weight:bold;padding-bottom:2pt}h6{padding-top:10pt;line-height:1.15;text-align:left;color:#666666;font-style:italic;font-size:10pt;font-family:"Arial";padding-bottom:2pt}</style>
+</head>
+<body>
+        <!--[if lt IE 7]>
+        <p class=chromeframe>
+          Your browser is <em>ancient!</em>
+          <a href="http://browsehappy.com/">Upgrade to a different browser</a>
+          or
+          <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a>
+          to experience this site.
+        </p>
+        <![endif]-->
+
+        <div class="navbar navbar-fixed-top">
+          <div class="navbar-inner">
+            <div class="container">
+              <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </a>
+              <a class="brand" href="#">
+                <span class="coolFont">Ido's Hack Space</span>
+              </a>
+              <div class="nav-collapse">
+                <ul class="nav">
+                  <li class="active">
+                    <a href="http://ido-green.appspot.com/">Home</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/greenido" target="_blank">Code</a>
+                  </li>
+                  <li>
+                    <a href="http://greenido.wordpress.com/" target="_blank">News</a>
+                  </li>
+
+                  <ul class="nav pull-right">
+
+                    <li class="divider-vertical"></li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        Other Stuff <b class="caret"></b>
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a href="http://about.me/greenido" target="_blank">About</a>
+                        </li>
+                        <li>
+                          <a href="http://plus.ly/greenido" target="_blank">+greenido</a>
+                        </li>
+                        <li>
+                          <a href="https://twitter.com/#!/greenido" target="_blank">@greenido</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li class="nav-header">Posts & Code</li>
+                        <li>
+                          <a href="https://github.com/greenido" target="_blank">GitHub</a>
+                        </li>
+                        <li>
+                          <a href="http://greenido.wordpress.com/" target="_blank">My blog</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+
+                  <li>
+                    <div id="plusone">
+                      <g:plusone></g:plusone>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <!--/.nav-collapse --> </div>
+          </div>
+        </div>
+
+        <div class="hero-unit">
+
+          <h1>
+              Big Data And HTML5 - Devcon Sep, 2012 Tel Aviv
+          </h1>         
+
+          <p class="c3">
+            <span>Slides:</span>
+            <iframe src="https://docs.google.com/presentation/embed?id=1nLAgiC7n27RgqV1xGFmh9JNb_mU1u_R5dsu0IexFlkI&start=false&loop=false&delayms=3000" frameborder="0" width="1280" height="749" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+            
+          </p>
+          <p class="c3">
+            <span>Code:</span>
+            <span class="c20">
+              <a class="c13" href="https://github.com/greenido/backbone-bira">https://github.com/greenido/backbone-bira</a>
+            </span>
+            <span>&nbsp;</span>
+          </p>
+          
+         
+         <!-- Start of comments -->
+         <div id="disqus_thread"></div>
+          <script type="text/javascript">
+            var disqus_shortname = 'greenido'; 
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+          <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        <!-- end of comments -->
+
+            <footer>
+              <div class="row">
+                <div class="span2 tips coolFontBig" title="It's all yours under a Creative Commons - Have fun and let me know when/where you use it so I'll be proud of you">Ido Green 2011</div>
+                <div class="span1 wooop tips" title="My twitter user @greenido">
+                  <a href="https://twitter.com/#!/greenido" target="_blank" >
+                    <img src="../imgs/twitter64x64.png" width="64px" height="64px"/>
+                  </a>
+                </div>
+                <div class="span1 wooop tips" title="Little jump in Colorado">
+                  <a href="http://about.me/greenido" target="_blank" >
+                    <img src="../imgs/in64x64.png" width="64px" height="64px"/>
+                  </a>
+                </div>
+                <div class="span1 wooop tips" title="My G+ spot in the world">
+                  <a href="http://plus.ly/greenido" target="_blank" >
+                    <img src="../imgs/g+64x64.png" width="64px" height="64px"></a>
+                </div>
+                <div class="span1 wooop tips" title="My blog">
+                  <a href="http://greenido.wordpress.com" target="_blank">
+                    <img src="../imgs/wordpress64x64.png" width="64px" height="64px"></a>
+                </div>
+                <div class="span3 tips" title="HTML5 Powered with Connectivity / Realtime, CSS3 / Styling, Device Access, Graphics, 3D &amp; Effects, Multimedia, Performance &amp; Integration, Semantics, and Offline &amp; Storage (2012 Feb 15) ">
+                  <a href="http://www.w3.org/html/logo/" target="_blank" class='w3-logo' >
+                    <img src="http://www.w3.org/html/logo/badge/html5-badge-h-connectivity-css3-device-graphics-multimedia-performance-semantics-storage.png" 
+                   width="357" height="64" alt="HTML5 Powered with Connectivity / Realtime, CSS3 / Styling, Device Access, Graphics, 3D &amp; Effects, Multimedia, Performance &amp; Integration, Semantics, and Offline &amp; Storage" ></a>
+                </div>
+              </div>
+            </footer>
+          </div>
+
+        </div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.2.min.js"><\/script>')</script>
+
+      <script src="../js/libs/bootstrap/bootstrap.min.js"></script>
+
+      <!-- scripts concatenated and minified via ant build script-->
+      <script src="../js/libs/jquery.tipTip.minified.js"></script>
+      <script src="../js/plugins.js"></script>
+
+      <script src="http://apis.google.com/js/plusone.js"></script>
+
+      <script>
+  var _gaq=[['_setAccount','UA-27750723-1'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+
+</body>
+    </html>

@@ -58,7 +58,10 @@ body, button, input, select, textarea { font-family: sans-serif; color: #222; }
    Links
    ========================================================================== */
 
-a { color: #00e; }
+a { 
+    color: #00e; 
+    line-height: 130%;
+}
 /* a:visited { color: #551a8b; } */
 a:focus { outline: thin dotted; }
 
@@ -119,7 +122,10 @@ nav ul, nav ol { list-style: none; margin: 0; padding: 0; }
  * code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
 */
 
-img { border: 0; -ms-interpolation-mode: bicubic; }
+img { 
+  border: 0; -ms-interpolation-mode: bicubic;
+  margin-left: 1.5em;
+}
 
 /*
  * Correct overflow displayed oddly in IE9 
@@ -284,16 +290,19 @@ table { border-collapse: collapse; border-spacing: 0; }
   h2, h3{ page-break-after: avoid; }
 }
 
-
 .coolFont {
   font-family: 'Rock Salt', cursive;
   font-size: 90%;
+<<<<<<< HEAD
+  color: rgba(227, 236, 10, 0.95);
+=======
+  color: rgba(184, 189, 61, 0.95);
+>>>>>>> FETCH_HEAD
 }
 
 .coolFontBig {
   font-family: 'Rock Salt', cursive;
   font-size: 150%;
-
 }
 
 .headimg {
@@ -407,3 +416,73 @@ div#mark-done:nth-of-type(1) ul li:after{
     padding: 30px;
     margin-top: 4em;
 }
+
+.bottom-boxes {
+  padding-top: 1em;
+<<<<<<< HEAD
+  border-top-color: rgba(39, 13, 13, 0.14);
+  border-top-width: 2px;
+=======
+	border-top-color: rgba(39, 13, 13, 0.14);
+	border-top-width: 2px;
+>>>>>>> FETCH_HEAD
+  border-top-style: solid;
+}
+
+/*
+Our nice heart effect for the runners
+*/
+@keyframes pound {
+  to { transform: scale(1.8);  }
+}
+@-webkit-keyframes pound {
+  to { -webkit-transform: scale(1.8); }
+}
+
+.heart {
+  display: inline-block;
+  font-size: 1.2em;
+<<<<<<< HEAD
+  color: rgba(60, 11, 11, 0.8);
+=======
+  color: rgba(60, 11, 11, 0.4);
+>>>>>>> FETCH_HEAD
+  -webkit-animation: pound 1.3s infinite alternate;
+  -webkit-transform-origin: center;
+  animation: pound 1.3s infinite alternate;
+  transform-origin: center;
+  position: relative;
+<<<<<<< HEAD
+  right: -8em;
+  bottom: 1.4em;
+  text-align: center;
+}
+
+.accordion-inner {
+  background: rgba(196, 181, 155, 0.32);
+
+
+.navbar-inner {
+  background-color: #042550;
+  background-image: -moz-linear-gradient(top, #042550, rgb(133, 186, 211));
+  background-image: -ms-linear-gradient(top, #042550, rgb(133, 186, 211));
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#042550), to(rgb(133, 186, 211)));
+  background-image: -webkit-linear-gradient(top, #042550, rgb(133, 186, 211));
+  background-image: -o-linear-gradient(top, #042550, rgb(133, 186, 211));
+  background-image: linear-gradient(top, #042550, rgb(133, 186, 211));
+  background-repeat: repeat-x;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#042550', endColorstr='rgb(133, 186, 211)', GradientType=0);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+     -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+}
+=======
+  right: 0.7em;
+  bottom: 1.4em;
+}
+
+body { text-align: center; }
+>>>>>>> FETCH_HEAD

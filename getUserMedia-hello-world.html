@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>getUserMedia Example</title>
+    <meta name="description" content="WebRTC Simple example" />
+    <meta name="author" content="Ido Green | greenido.wordpress.com">
+
+    <meta name="keywords" content="WebRTC, HTML5, JavaScript, Hack, Ido Green" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <base target="_blank">
+
+    <style>
+      video {
+        height: 25em;
+        position: relative;
+        left: 15%;
+      }
+
+      #video-space {
+        padding: 1em;
+        background-color: rgba(70, 70, 6, 0.55);
+        border-radius: 25px;
+
+      }
+      ul {
+        padding: 2em;
+        font-family: sans-serif;
+        font-size: 120%;
+        line-height:160%;
+        background-color: lightgray;
+        border-radius: 25px
+      }
+      .right-top {
+        position:absolute;
+        right: 5px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <span class="right-top">
+      <img src="https://www.evernote.com/shard/s9/sh/a11a8e6e-5a91-40d6-8fb7-20b917dd52ea/26ffc35b570a9126158a185285e60160/deep/0/Blank.png"
+      alt="show the user where to click in order to gain permissions for getUserMedia API" />
+    </span>
+    <h1>getUserMedia API Example</h1>
+
+    <div id='video-space'>
+      <video autoplay></video>
+    </div>
+
+    <script>
+       function hasGetUserMedia() {
+        return !!(navigator.getUserMedia || navigator.webkitGetUserMedia ||
+                  navigator.mozGetUserMedia || navigator.msGetUserMedia);
+      }
+
+      navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
+      var constraints = {audio: false, video: true};
+      var video = document.querySelector("video");
+
+      function successCallback(stream) {
+        if (hasGetUserMedia()) {
+          // Good to go! remove the picture that is calling to action.
+          document.querySelector(".right-top").style.display = 'none';
+        } else {
+          alert('Yo! getUserMedia() is not supported in your browser. Get Chrome/FF ;)');
+        }
+        // stream available to console so you could inspect it and see what this object looks like
+        window.stream = stream;
+        if (window.URL) {
+          video.src = window.URL.createObjectURL(stream);
+        } else {
+          video.src = stream;
+        }
+        video.play();
+      }
+
+      function errorCallback(error) {
+        console.log("navigator.getUserMedia error: ", error);
+      }
+
+      navigator.getUserMedia(constraints, successCallback, errorCallback);
+
+    </script>
+
+    <p>
+    <ul>
+      <li>
+        <img src="imgs/camera-chrome.png" style="padding-top:8px">(!) Please remember to run this example from a (local) web server and not by 'just' clicking on the html. Why? because the browser will block getUserMedia API by default if you won't serve it from a web server. Even in the case of a web server you need to 'allow' this permission in the top-right corner of this page.
+      </li>
+      <li>
+        <a href="http://greenido.wordpress.com/2013/08/14/webrtc-updates/" title="WebRTC post on Ido's blog">WebRTC Updates with Demos</a>
+      </li>
+      <li>
+        <a href="https://gist.github.com/greenido/6238800" title="View source for this page on github" id="viewSource">The source on github</a>
+      </li>
+    </ul>
+  </p>
+  <script>
+      var _gaq = [['_setAccount', 'UA-27750723-1'], ['_trackPageview']]; ( function(d, t) {
+          var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
+          g.src = ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js';
+          s.parentNode.insertBefore(g, s)
+        }(document, 'script'));
+   </script>
+
+</body>
+</html>

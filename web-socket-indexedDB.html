@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script>
+$(function() {
+  console.log("ddsfdsfsdfsfs");
+var database;
+  var indexeddb = window.indexedDB || window.webkitIndexedDB ||
+                window.mozIndexedDB;
+indexeddb.open('demobase').onsuccess = function(e) {
+  database = e.result;
+  var server = new WebSocket('ws://echo.websocket.org'); //'ws://whatwg.org/database');
+  server.onmessage = websocketHandler;
+  server.send("momo fofo bobo");
+}
+function websocketHandler(event) {
+  // data is in the format "command key value"
+  var data = event.data.split(' ');
+  switch (data[0]) {
+    case '+':
+     database.transaction(["pairs"], IDBTransaction.READ_WRITE)
+       .objectStore("pairs").put(data[2], data[1]);
+    case '-':
+     database.transaction(["pairs"], IDBTransaction.READ_WRITE)
+       .objectStore("pairs").delete(data[1]);
+  }
+};
+});
+
+</script>
+<title>Web sockets and indexedDB</title>
+
+<style>
+  article, aside, figure, footer, header, hgroup, 
+  menu, nav, section { display: block; }
+</style>
+</head>
+<body>
+  <p id="hello">Hello World</p>
+</body>
+</html>
+
