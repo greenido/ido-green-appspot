@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IndexDB Demo - Version 2.0</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="author" content="Ido Green"/>
+  </head>
+  <style>
+    #footer {
+      background-color: yellowgreen;
+      padding: 8px;
+      margin: 6px;
+      -moz-border-radius: 15px;
+      -webkit-border-radius: 15px;
+    }
+    #footer p {
+      font-size: 90%;
+      font-style: italic;
+    }
+    pre {
+      background-color: lightcyan;
+      padding: 8px;
+      margin: 6px;
+      -moz-border-radius: 15px;
+      -webkit-border-radius: 15px;
+      font-size: 20px;
+
+    }
+    #ourList {
+      background-color: lightgoldenrodyellow;
+      padding: 8px;
+      margin: 6px;
+      -moz-border-radius: 15px;
+      -webkit-border-radius: 15px;
+    }
+  </style>
+  <body>
+
+    <!--
+     *  MDC - fixit day
+     * Ido Green
+     * Date: 6/24/2011
+     * Last updated: 11/28/2011
+     *
+    --> 
+
+    <h1>Indexed DB - 101 Tutorial With A Working Example</h1> 
+    <aside class="note"> 
+      <section> 
+        This demo requires FF4 or Google Chrome 12 or greater.<br/>
+        You can read more on <a href='http://wp.me/pB1lQ-kB' target='_blank'>"How To Use IndexDB - Code And Example"</a>
+      </section> 
+    </aside> 
+
+    <section> 
+      <pre>var idbRequest = window.<b>indexedDB</b>.<b>open</b>('Database Name');
+    idbRequest.onsuccess = function(e) {
+        <b>var db = this.result</b>;
+        var transaction = db.<b>transaction</b>(idb_.objectStoreNames[0], <b>IDBTransaction.READ_ONLY</b>);
+        var curRequest = transaction.<b>objectStore</b>('ObjectStore Name').<b>openCursor</b>();
+        curRequest.<b>onsuccess</b> = ...;
+    };
+      </pre> 
+
+
+      <div class="hcenter" id="indexeddb-example"> 
+        <p> 
+          <button onclick="indexedDbUtil.idbCreate()">Create object Store</button> 
+          <button onclick="indexedDbUtil.idbRemove()">Remove object Store</button>
+          <button onclick="indexedDbUtil.showAll()">Show All objects</button>
+        </p> 
+        <input type="text" placeholder="key" id="idb-key" size="10" /> <input type="text" placeholder="value" id="idb-value" size="10" /> 
+        <button onclick="indexedDbUtil.idbSet()">set</button> 
+        <div id="idb-log"></div> 
+        <div class="record-list" id="idb-results-wrapper"></div> 
+
+        <p>
+        <div id='ourList'>
+        </div>
+        </p>
+      </div> 
+      <script> 
+        // For our demo - let's put all the code under indexDBUti
+        var indexedDbUtil = (function() {
+          var idb_;           // Our local DB
+          var idbRequest_;    // Our DB request obj
+          //
+          // just a simple way to show what we are doing on the page
+          var idbLog_ = document.getElementById('idb-log');   
+          var idResultsWrapper_ = document.getElementById('idb-results-wrapper');
+ 
+          // IndexedDB spec is still evolving - see: http://www.w3.org/TR/IndexedDB/
+          // various browsers keep it
+          // behind various flags and implementation varies.
+          if ('webkitIndexedDB' in window) {
+            window.indexedDB = window.webkitIndexedDB;
+            window.IDBTransaction = window.webkitIDBTransaction;
+          } else if ('mozIndexedDB' in window) {
+            window.indexedDB = window.mozIndexedDB;
+          }
+ 
+          // Open our IndexedDB if the browser supports it.
+          if (window.indexedDB) {
+            idbRequest_ = window.indexedDB.open("Test", "Our Amazing test object IndexDB");
+            idbRequest_.onerror = idbError_;
+            idbRequest_.addEventListener('success', function(e) {
+              // FF4 requires e.result. IDBRequest.request isn't set 
+              // FF5/Chrome works fine. 
+              idb_ = idbRequest_.result || e.result;  
+              idbShow_(e);
+            }, false);
+          }
+                    
+          // on errors - show us what is going wrong
+          function idbError_(e) {
+            idbLog_.innerHTML += '<p class="error">Error: ' +
+              e.message + ' (' + e.code + ')</p>';
+          }
+ 
+          // In cases we add/remove objects - show the user what is changing in the DB
+          function idbShow_(e) {
+            if (!idb_.objectStoreNames.contains('myObjectStore')) {
+              idbLog_.innerHTML = "<p>Object store not yet created.</p>";
+              return;
+            }
+ 
+            var msgBoard = [];
+            // Ready is default - make sure NOT to pass empty array in the first param as it use to be something like: []
+            var transaction = idb_.transaction([idb_.objectStoreNames[0]], IDBTransaction.READ_ONLY); 
+            // Get all results.
+            var request = transaction.objectStore("myObjectStore").openCursor(); 
+            //
+            //
+            // This callback will continue to be called until we have no more results.
+            request.onsuccess = function(e) {
+              // FF4 requires e.result. IDBRequest.request isn't set
+              // FF5/Chrome works fine.
+              var cursor = request.result || e.result;  
+              if (!cursor) {
+                idResultsWrapper_.innerHTML = '<ul class="record-list" id="idb-results">' + msgBoard.join('') + '</ul>';
+                return;
+              }
+              msgBoard.push('<li><span class="keyval" contenteditable onblur="indexedDbUtil.updateKey(\'',
+              cursor.key, '\', this)">', cursor.key, '</span> ',
+              '=> <span class="keyval" contenteditable onblur="indexedDbUtil.updateValue(\'',
+              cursor.key, '\', this)">', cursor.value, '</span>&nbsp; ',
+              '<a href="javascript:void(0)" onclick="indexedDbUtil.deleteKey(\'',
+              cursor.key, '\')">[Delete]</a></li>');
+              cursor.continue();
+            }
+            request.onerror = idbError_;
+          }
+                    
+          // Simple example to show all our records in the DB
+          function showAll_() {
+            document.getElementById("ourList").innerHTML = "" ;   
+            var request = window.indexedDB.open("Test",
+            "Our Test database");
+            request.onsuccess = function(event) {
+              // Enumerate the entire object store.
+              // request = event.currentTarget.result.objectStoreNames[0]("myObjectStore").openCursor();
+              var transaction = idb_.transaction([idb_.objectStoreNames[0]], IDBTransaction.READ_ONLY); // Ready is default.
+              var request = transaction.objectStore("myObjectStore").openCursor();
+              request.onsuccess = function(event) {
+                var cursor = request.result || event.result;
+                // If cursor is null then we've completed the enumeration.
+                if (!cursor) {
+                  return;
+                }
+                var element = document.createElement("div");
+                element.textContent = "key: " + cursor.key + "=>  Value: " + cursor.value;
+                document.getElementById("ourList").appendChild(element);
+                cursor.
+                  continue ();
+              };
+            };                    
+          }
+                    
+                    
+          function idbCreate_() {
+            if (!idb_) {
+              if (idbRequest_) {
+                // If indexedDB is still opening, just queue this up.
+                idbRequest_.addEventListener('success', idb_.removeObjectStore, false); 
+              }
+              return;
+            }
+ 
+            var request = idb_.setVersion('the new version string');
+            request.onerror = idbError_;
+            request.onsuccess = function(e) {
+              if (!idb_.objectStoreNames.contains('myObjectStore')) {
+                try {
+                  // FF is requiring the 2nd keyPath arg. It can be optional 
+                  var objectStore = idb_.createObjectStore('myObjectStore', null); 
+                  idbLog_.innerHTML = "<p>Object store created.</p>";
+                } catch (err) {
+                  idbLog_.innerHTML = '<p class="error">' + err.toString() + '</p>';
+                }
+              } else {
+                idbLog_.innerHTML = '<p class="error">Object store already exists.</p>';
+              }
+            }
+          }
+ 
+          function idbSet_() {
+            if (!idb_) {
+              if (idbRequest_) {
+                // If indexedDB is still opening, just queue this up.
+                idbRequest_.addEventListener('success', idb_.removeObjectStore, false); 
+              }
+              return;
+            }
+ 
+            if (!idb_.objectStoreNames.contains('myObjectStore')) {
+              idbLog_.innerHTML = "<p class=\"error\">Object store doesn't exist.</p>";
+              return;
+            }
+ 
+            // Create a transaction that locks the world.
+            var objectStore = idb_.transaction([idb_.objectStoreNames[0]], IDBTransaction.READ_WRITE)
+            .objectStore("myObjectStore");
+            var request = objectStore.put(
+            document.getElementById('idb-value').value,
+            document.getElementById('idb-key').value);
+            request.onerror = idbError_;
+            request.onsuccess = idbShow_;
+          }
+ 
+          function updateKey_(key, element) {
+            var newKey = element.textContent;
+            // Create a transaction that locks the world.
+            var transaction = idb_.transaction([idb_.objectStoreNames[0]], IDBTransaction.READ_WRITE); 
+            var objectStore = transaction.objectStore("myObjectStore");
+            var request = objectStore.get(key);
+            request.onerror = idbError_;
+            request.onsuccess = function(e) {
+              // FF4 requires e.result. IDBRequest.request isn't set.
+              // FF5/Chrome works fine.
+              var value = e.result || this.result;  
+              if (objectStore.delete) {
+                var request = objectStore.delete(key);
+              } else {
+                // FF4 not up to spect
+                var request = objectStore.remove(key); 
+              }
+              request.onerror = idbError_;
+              request.onsuccess = function(e) {
+                var request = objectStore.add(value, newKey);
+                request.onerror = idbError_;
+                request.onsuccess = idbShow_;
+              };
+            };
+          }
+ 
+          function updateValue_(key, element) {
+            // Create a transaction that locks the world.
+            var transaction = idb_.transaction([idb_.objectStoreNames[0]], IDBTransaction.READ_WRITE); 
+            var objectStore = transaction.objectStore("myObjectStore");
+            var request = objectStore.put(element.textContent, key);
+            request.onerror = idbError_;
+            request.onsuccess = idbShow_;
+          }
+ 
+          function deleteKey_(key) {
+            // Create a transaction that locks the world.
+            var transaction = idb_.transaction([idb_.objectStoreNames[0]], IDBTransaction.READ_WRITE); 
+            var objectStore = transaction.objectStore("myObjectStore");
+            if (objectStore.delete) {
+              var request = objectStore.delete(key);
+            } else {
+              // FF4 not up to spect
+              // FF5 and Chrome - are by the book :)
+              var request = objectStore.remove(key);  
+            }
+            request.onerror = idbError_;
+            request.onsuccess = idbShow_;
+          }
+ 
+          function idbRemove_() {
+            if (!idb_) {
+              if (idbRequest_) {
+                // If indexedDB is still opening, just queue this up.
+                idbRequest_.addEventListener('success', idb_.removeObjectStore, false); 
+              }
+              return;
+            }
+ 
+            var request = idb_.setVersion("the new version string");
+            request.onerror = idbError_;
+            request.onsuccess = function(e) {
+ 
+              if (idb_.objectStoreNames.contains('myObjectStore')) {
+                try {
+                  // Spec has been updated to deleteObjectStore.
+                  if (idb_.deleteObjectStore) {
+                    idb_.deleteObjectStore('myObjectStore');
+                  } else {
+                    idb_.removeObjectStore('myObjectStore');
+                  }
+                  idResultsWrapper_.innerHTML = '';
+                  idbLog_.innerHTML = "<p>Object store removed.</p>";
+                } catch (err) {
+                  idbLog_.innerHTML = '<p class="error">' + err.toString() + '</p>';
+                }
+              } else {
+                idbLog_.innerHTML = "<p class=\"error\">Object store doesn't exist.</p>";
+              }
+            };
+          }
+ 
+          return {
+            idbSet: idbSet_,
+            idbCreate: idbCreate_,
+            idbRemove: idbRemove_,
+            updateKey: updateKey_,
+            updateValue: updateValue_,
+            deleteKey: deleteKey_,
+            showAll: showAll_
+          }
+        })();
+      </script> 
+    </section> 
+
+    <div id='footer'>
+      <h3>Tips</h3>
+      <ul>
+        <li>If you can't even open the DB and you something like this error:
+          <p>
+            The operation failed for reasons unrelated to the database itself and not covered by any other error code." code: "1<br/>
+            [Break On This Error] idbRequest_ = ..., "Our Amazing test object IndexDB"); 
+          </p>
+          you need to run your page from a web server and NOT fetch it as local file.
+        </li>
+      </ul>    
+
+    </div>
+  </body>
+</html>
